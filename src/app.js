@@ -23,32 +23,35 @@ var circle = new UI.Circle({
   backgroundColor: 'white',
 });
 
-function refreshData(panel) {
-  var options = {
-    enableHighAccuracy: true,
-    maximumAge: 10000,
-    timeout: 10000
-  };
-  navigator.geolocation.getCurrentPosition(
-    function(pos) {
-      console.log('lat= ' + pos.coords.latitude + ' lon= ' + pos.coords.longitude);
-      ajax(
-        {
-          url: 'https://pokevision.com/map/data/' + pos.coords.latitude + '/' + pos.coords.longitude,
-          type: 'json'
-        },
-        function(data, status, req) {
-          console.log(data.pokemon.length);
-          if (data.pokemon.length) {
-            Tracker.setPokemon(panel, pos.coords, data.pokemon[0]);
-          } else {
-            Tracker.setPokemon(panel, pos.coords, null);
-          }
-        }
-      );
+var geolocation_options = {
+  enableHighAccuracy: true,
+  maximumAge: 10000
+};
+
+
+function refreshData(panel, pos) {
+  console.log('lat= ' + pos.coords.latitude + ' lon= ' + pos.coords.longitude);
+  ajax(
+    {
+      url: 'https://pokevision.com/map/data/' + pos.coords.latitude + '/' + pos.coords.longitude,
+      type: 'json'
     },
-    function() {},
-    options
+    function(data, status, req) {
+      console.log(data.pokemon.length);
+      if (data.pokemon.length) {
+        Tracker.setPokemon(panel, pos.coords, data.pokemon[0]);
+      } else {
+        Tracker.setPokemon(panel, pos.coords, null);
+      }
+    }
+  );
+}
+
+function refreshLocation() {
+  navigator.geolocation.getCurrentPosition(
+    function(pos) { refreshData(panel, pos); },
+    function() { console.log('fetch location failed'); },
+    geolocation_options
   );
 }
 
@@ -57,8 +60,12 @@ panel.add(circle);
 Nearby.draw(panel);
 panel.show();
 
-refreshData(panel);
+refreshLocation();
 
-panel.on('click', 'select', function() {
-  refreshData(panel);
-});
+panel.on('click', 'select', refreshLocation);
+
+navigator.geolocation.watchPosition(
+  function(pos) { refreshData(panel, pos); },
+  function() { console.log('fetch location failed'); },
+  geolocation_options
+);

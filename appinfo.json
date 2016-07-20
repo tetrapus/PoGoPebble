@@ -4,7 +4,7 @@
         "location"
     ],
     "companyName": "joey.tuong@gmail.com",
-    "longName": "Pogo",
+    "longName": "Pokemon Go Tracker",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -787,11 +787,9 @@
         ]
     },
     "sdkVersion": "3",
-    "shortName": "Pogo",
+    "shortName": "Pokemon",
     "targetPlatforms": [
-        "aplite",
-        "basalt",
-        "chalk"
+        "basalt"
     ],
     "uuid": "4917e277-a47e-493b-9107-d47ab86e2f3e",
     "versionCode": 1,
