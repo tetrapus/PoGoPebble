@@ -30,463 +30,8 @@
                 "type": "font"
             },
             {
-                "file": "images/pokemon1.png",
-                "name": "IMAGES_POKEMON1_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon2.png",
-                "name": "IMAGES_POKEMON2_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon3.png",
-                "name": "IMAGES_POKEMON3_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon4.png",
-                "name": "IMAGES_POKEMON4_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon5.png",
-                "name": "IMAGES_POKEMON5_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon6.png",
-                "name": "IMAGES_POKEMON6_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon7.png",
-                "name": "IMAGES_POKEMON7_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon8.png",
-                "name": "IMAGES_POKEMON8_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon9.png",
-                "name": "IMAGES_POKEMON9_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon10.png",
-                "name": "IMAGES_POKEMON10_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon11.png",
-                "name": "IMAGES_POKEMON11_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon12.png",
-                "name": "IMAGES_POKEMON12_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon13.png",
-                "name": "IMAGES_POKEMON13_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon14.png",
-                "name": "IMAGES_POKEMON14_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon15.png",
-                "name": "IMAGES_POKEMON15_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon16.png",
-                "name": "IMAGES_POKEMON16_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon17.png",
-                "name": "IMAGES_POKEMON17_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon18.png",
-                "name": "IMAGES_POKEMON18_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon19.png",
-                "name": "IMAGES_POKEMON19_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon20.png",
-                "name": "IMAGES_POKEMON20_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon21.png",
-                "name": "IMAGES_POKEMON21_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon22.png",
-                "name": "IMAGES_POKEMON22_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon23.png",
-                "name": "IMAGES_POKEMON23_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon24.png",
-                "name": "IMAGES_POKEMON24_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon25.png",
-                "name": "IMAGES_POKEMON25_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon26.png",
-                "name": "IMAGES_POKEMON26_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon27.png",
-                "name": "IMAGES_POKEMON27_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon28.png",
-                "name": "IMAGES_POKEMON28_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon29.png",
-                "name": "IMAGES_POKEMON29_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon30.png",
-                "name": "IMAGES_POKEMON30_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon31.png",
-                "name": "IMAGES_POKEMON31_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon32.png",
-                "name": "IMAGES_POKEMON32_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon33.png",
-                "name": "IMAGES_POKEMON33_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon34.png",
-                "name": "IMAGES_POKEMON34_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon35.png",
-                "name": "IMAGES_POKEMON35_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon36.png",
-                "name": "IMAGES_POKEMON36_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon37.png",
-                "name": "IMAGES_POKEMON37_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon38.png",
-                "name": "IMAGES_POKEMON38_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon39.png",
-                "name": "IMAGES_POKEMON39_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon40.png",
-                "name": "IMAGES_POKEMON40_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon41.png",
-                "name": "IMAGES_POKEMON41_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon42.png",
-                "name": "IMAGES_POKEMON42_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon43.png",
-                "name": "IMAGES_POKEMON43_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon44.png",
-                "name": "IMAGES_POKEMON44_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon45.png",
-                "name": "IMAGES_POKEMON45_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon46.png",
-                "name": "IMAGES_POKEMON46_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon47.png",
-                "name": "IMAGES_POKEMON47_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon48.png",
-                "name": "IMAGES_POKEMON48_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon49.png",
-                "name": "IMAGES_POKEMON49_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon50.png",
-                "name": "IMAGES_POKEMON50_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon51.png",
-                "name": "IMAGES_POKEMON51_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon52.png",
-                "name": "IMAGES_POKEMON52_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon53.png",
-                "name": "IMAGES_POKEMON53_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon54.png",
-                "name": "IMAGES_POKEMON54_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon55.png",
-                "name": "IMAGES_POKEMON55_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon56.png",
-                "name": "IMAGES_POKEMON56_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon57.png",
-                "name": "IMAGES_POKEMON57_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon58.png",
-                "name": "IMAGES_POKEMON58_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon59.png",
-                "name": "IMAGES_POKEMON59_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon60.png",
-                "name": "IMAGES_POKEMON60_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon61.png",
-                "name": "IMAGES_POKEMON61_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon62.png",
-                "name": "IMAGES_POKEMON62_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon63.png",
-                "name": "IMAGES_POKEMON63_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon64.png",
-                "name": "IMAGES_POKEMON64_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon65.png",
-                "name": "IMAGES_POKEMON65_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon66.png",
-                "name": "IMAGES_POKEMON66_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon67.png",
-                "name": "IMAGES_POKEMON67_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon68.png",
-                "name": "IMAGES_POKEMON68_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon69.png",
-                "name": "IMAGES_POKEMON69_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon70.png",
-                "name": "IMAGES_POKEMON70_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon71.png",
-                "name": "IMAGES_POKEMON71_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon72.png",
-                "name": "IMAGES_POKEMON72_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon73.png",
-                "name": "IMAGES_POKEMON73_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon74.png",
-                "name": "IMAGES_POKEMON74_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon75.png",
-                "name": "IMAGES_POKEMON75_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon76.png",
-                "name": "IMAGES_POKEMON76_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon77.png",
-                "name": "IMAGES_POKEMON77_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon78.png",
-                "name": "IMAGES_POKEMON78_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon79.png",
-                "name": "IMAGES_POKEMON79_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon80.png",
-                "name": "IMAGES_POKEMON80_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon81.png",
-                "name": "IMAGES_POKEMON81_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon82.png",
-                "name": "IMAGES_POKEMON82_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon83.png",
-                "name": "IMAGES_POKEMON83_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon84.png",
-                "name": "IMAGES_POKEMON84_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon85.png",
-                "name": "IMAGES_POKEMON85_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon86.png",
-                "name": "IMAGES_POKEMON86_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon87.png",
-                "name": "IMAGES_POKEMON87_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon88.png",
-                "name": "IMAGES_POKEMON88_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon89.png",
-                "name": "IMAGES_POKEMON89_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon90.png",
-                "name": "IMAGES_POKEMON90_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon91.png",
-                "name": "IMAGES_POKEMON91_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon92.png",
-                "name": "IMAGES_POKEMON92_PNG",
+                "file": "images/pokemon94.png",
+                "name": "IMAGES_POKEMON94_PNG",
                 "type": "png"
             },
             {
@@ -495,283 +40,433 @@
                 "type": "png"
             },
             {
-                "file": "images/pokemon94.png",
-                "name": "IMAGES_POKEMON94_PNG",
+                "file": "images/pokemon92.png",
+                "name": "IMAGES_POKEMON92_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon95.png",
-                "name": "IMAGES_POKEMON95_PNG",
+                "file": "images/pokemon91.png",
+                "name": "IMAGES_POKEMON91_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon96.png",
-                "name": "IMAGES_POKEMON96_PNG",
+                "file": "images/pokemon90.png",
+                "name": "IMAGES_POKEMON90_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon97.png",
-                "name": "IMAGES_POKEMON97_PNG",
+                "file": "images/pokemon9.png",
+                "name": "IMAGES_POKEMON9_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon98.png",
-                "name": "IMAGES_POKEMON98_PNG",
+                "file": "images/pokemon89.png",
+                "name": "IMAGES_POKEMON89_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon99.png",
-                "name": "IMAGES_POKEMON99_PNG",
+                "file": "images/pokemon88.png",
+                "name": "IMAGES_POKEMON88_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon100.png",
-                "name": "IMAGES_POKEMON100_PNG",
+                "file": "images/pokemon87.png",
+                "name": "IMAGES_POKEMON87_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon101.png",
-                "name": "IMAGES_POKEMON101_PNG",
+                "file": "images/pokemon86.png",
+                "name": "IMAGES_POKEMON86_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon102.png",
-                "name": "IMAGES_POKEMON102_PNG",
+                "file": "images/pokemon85.png",
+                "name": "IMAGES_POKEMON85_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon103.png",
-                "name": "IMAGES_POKEMON103_PNG",
+                "file": "images/pokemon84.png",
+                "name": "IMAGES_POKEMON84_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon104.png",
-                "name": "IMAGES_POKEMON104_PNG",
+                "file": "images/pokemon83.png",
+                "name": "IMAGES_POKEMON83_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon105.png",
-                "name": "IMAGES_POKEMON105_PNG",
+                "file": "images/pokemon82.png",
+                "name": "IMAGES_POKEMON82_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon106.png",
-                "name": "IMAGES_POKEMON106_PNG",
+                "file": "images/pokemon81.png",
+                "name": "IMAGES_POKEMON81_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon107.png",
-                "name": "IMAGES_POKEMON107_PNG",
+                "file": "images/pokemon80.png",
+                "name": "IMAGES_POKEMON80_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon108.png",
-                "name": "IMAGES_POKEMON108_PNG",
+                "file": "images/pokemon8.png",
+                "name": "IMAGES_POKEMON8_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon109.png",
-                "name": "IMAGES_POKEMON109_PNG",
+                "file": "images/pokemon79.png",
+                "name": "IMAGES_POKEMON79_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon110.png",
-                "name": "IMAGES_POKEMON110_PNG",
+                "file": "images/pokemon78.png",
+                "name": "IMAGES_POKEMON78_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon111.png",
-                "name": "IMAGES_POKEMON111_PNG",
+                "file": "images/pokemon77.png",
+                "name": "IMAGES_POKEMON77_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon112.png",
-                "name": "IMAGES_POKEMON112_PNG",
+                "file": "images/pokemon76.png",
+                "name": "IMAGES_POKEMON76_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon113.png",
-                "name": "IMAGES_POKEMON113_PNG",
+                "file": "images/pokemon75.png",
+                "name": "IMAGES_POKEMON75_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon114.png",
-                "name": "IMAGES_POKEMON114_PNG",
+                "file": "images/pokemon74.png",
+                "name": "IMAGES_POKEMON74_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon115.png",
-                "name": "IMAGES_POKEMON115_PNG",
+                "file": "images/pokemon73.png",
+                "name": "IMAGES_POKEMON73_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon116.png",
-                "name": "IMAGES_POKEMON116_PNG",
+                "file": "images/pokemon72.png",
+                "name": "IMAGES_POKEMON72_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon117.png",
-                "name": "IMAGES_POKEMON117_PNG",
+                "file": "images/pokemon71.png",
+                "name": "IMAGES_POKEMON71_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon118.png",
-                "name": "IMAGES_POKEMON118_PNG",
+                "file": "images/pokemon70.png",
+                "name": "IMAGES_POKEMON70_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon119.png",
-                "name": "IMAGES_POKEMON119_PNG",
+                "file": "images/pokemon7.png",
+                "name": "IMAGES_POKEMON7_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon120.png",
-                "name": "IMAGES_POKEMON120_PNG",
+                "file": "images/pokemon69.png",
+                "name": "IMAGES_POKEMON69_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon121.png",
-                "name": "IMAGES_POKEMON121_PNG",
+                "file": "images/pokemon68.png",
+                "name": "IMAGES_POKEMON68_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon122.png",
-                "name": "IMAGES_POKEMON122_PNG",
+                "file": "images/pokemon67.png",
+                "name": "IMAGES_POKEMON67_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon123.png",
-                "name": "IMAGES_POKEMON123_PNG",
+                "file": "images/pokemon66.png",
+                "name": "IMAGES_POKEMON66_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon124.png",
-                "name": "IMAGES_POKEMON124_PNG",
+                "file": "images/pokemon65.png",
+                "name": "IMAGES_POKEMON65_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon125.png",
-                "name": "IMAGES_POKEMON125_PNG",
+                "file": "images/pokemon64.png",
+                "name": "IMAGES_POKEMON64_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon126.png",
-                "name": "IMAGES_POKEMON126_PNG",
+                "file": "images/pokemon63.png",
+                "name": "IMAGES_POKEMON63_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon127.png",
-                "name": "IMAGES_POKEMON127_PNG",
+                "file": "images/pokemon62.png",
+                "name": "IMAGES_POKEMON62_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon128.png",
-                "name": "IMAGES_POKEMON128_PNG",
+                "file": "images/pokemon61.png",
+                "name": "IMAGES_POKEMON61_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon129.png",
-                "name": "IMAGES_POKEMON129_PNG",
+                "file": "images/pokemon60.png",
+                "name": "IMAGES_POKEMON60_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon130.png",
-                "name": "IMAGES_POKEMON130_PNG",
+                "file": "images/pokemon6.png",
+                "name": "IMAGES_POKEMON6_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon131.png",
-                "name": "IMAGES_POKEMON131_PNG",
+                "file": "images/pokemon59.png",
+                "name": "IMAGES_POKEMON59_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon132.png",
-                "name": "IMAGES_POKEMON132_PNG",
+                "file": "images/pokemon58.png",
+                "name": "IMAGES_POKEMON58_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon133.png",
-                "name": "IMAGES_POKEMON133_PNG",
+                "file": "images/pokemon57.png",
+                "name": "IMAGES_POKEMON57_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon134.png",
-                "name": "IMAGES_POKEMON134_PNG",
+                "file": "images/pokemon56.png",
+                "name": "IMAGES_POKEMON56_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon135.png",
-                "name": "IMAGES_POKEMON135_PNG",
+                "file": "images/pokemon55.png",
+                "name": "IMAGES_POKEMON55_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon136.png",
-                "name": "IMAGES_POKEMON136_PNG",
+                "file": "images/pokemon54.png",
+                "name": "IMAGES_POKEMON54_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon137.png",
-                "name": "IMAGES_POKEMON137_PNG",
+                "file": "images/pokemon53.png",
+                "name": "IMAGES_POKEMON53_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon138.png",
-                "name": "IMAGES_POKEMON138_PNG",
+                "file": "images/pokemon52.png",
+                "name": "IMAGES_POKEMON52_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon139.png",
-                "name": "IMAGES_POKEMON139_PNG",
+                "file": "images/pokemon51.png",
+                "name": "IMAGES_POKEMON51_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon140.png",
-                "name": "IMAGES_POKEMON140_PNG",
+                "file": "images/pokemon50.png",
+                "name": "IMAGES_POKEMON50_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon141.png",
-                "name": "IMAGES_POKEMON141_PNG",
+                "file": "images/pokemon5.png",
+                "name": "IMAGES_POKEMON5_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon142.png",
-                "name": "IMAGES_POKEMON142_PNG",
+                "file": "images/pokemon49.png",
+                "name": "IMAGES_POKEMON49_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon143.png",
-                "name": "IMAGES_POKEMON143_PNG",
+                "file": "images/pokemon48.png",
+                "name": "IMAGES_POKEMON48_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon144.png",
-                "name": "IMAGES_POKEMON144_PNG",
+                "file": "images/pokemon47.png",
+                "name": "IMAGES_POKEMON47_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon145.png",
-                "name": "IMAGES_POKEMON145_PNG",
+                "file": "images/pokemon46.png",
+                "name": "IMAGES_POKEMON46_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon146.png",
-                "name": "IMAGES_POKEMON146_PNG",
+                "file": "images/pokemon45.png",
+                "name": "IMAGES_POKEMON45_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon147.png",
-                "name": "IMAGES_POKEMON147_PNG",
+                "file": "images/pokemon44.png",
+                "name": "IMAGES_POKEMON44_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon148.png",
-                "name": "IMAGES_POKEMON148_PNG",
+                "file": "images/pokemon43.png",
+                "name": "IMAGES_POKEMON43_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon149.png",
-                "name": "IMAGES_POKEMON149_PNG",
+                "file": "images/pokemon42.png",
+                "name": "IMAGES_POKEMON42_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon41.png",
+                "name": "IMAGES_POKEMON41_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon40.png",
+                "name": "IMAGES_POKEMON40_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon4.png",
+                "name": "IMAGES_POKEMON4_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon39.png",
+                "name": "IMAGES_POKEMON39_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon38.png",
+                "name": "IMAGES_POKEMON38_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon37.png",
+                "name": "IMAGES_POKEMON37_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon36.png",
+                "name": "IMAGES_POKEMON36_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon35.png",
+                "name": "IMAGES_POKEMON35_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon34.png",
+                "name": "IMAGES_POKEMON34_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon33.png",
+                "name": "IMAGES_POKEMON33_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon32.png",
+                "name": "IMAGES_POKEMON32_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon31.png",
+                "name": "IMAGES_POKEMON31_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon30.png",
+                "name": "IMAGES_POKEMON30_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon3.png",
+                "name": "IMAGES_POKEMON3_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon29.png",
+                "name": "IMAGES_POKEMON29_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon28.png",
+                "name": "IMAGES_POKEMON28_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon27.png",
+                "name": "IMAGES_POKEMON27_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon26.png",
+                "name": "IMAGES_POKEMON26_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon25.png",
+                "name": "IMAGES_POKEMON25_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon24.png",
+                "name": "IMAGES_POKEMON24_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon23.png",
+                "name": "IMAGES_POKEMON23_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon22.png",
+                "name": "IMAGES_POKEMON22_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon21.png",
+                "name": "IMAGES_POKEMON21_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon20.png",
+                "name": "IMAGES_POKEMON20_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon2.png",
+                "name": "IMAGES_POKEMON2_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon19.png",
+                "name": "IMAGES_POKEMON19_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon18.png",
+                "name": "IMAGES_POKEMON18_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon17.png",
+                "name": "IMAGES_POKEMON17_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon16.png",
+                "name": "IMAGES_POKEMON16_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon151.png",
+                "name": "IMAGES_POKEMON151_PNG",
                 "type": "png"
             },
             {
@@ -780,8 +475,313 @@
                 "type": "png"
             },
             {
-                "file": "images/pokemon151.png",
-                "name": "IMAGES_POKEMON151_PNG",
+                "file": "images/pokemon15.png",
+                "name": "IMAGES_POKEMON15_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon149.png",
+                "name": "IMAGES_POKEMON149_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon148.png",
+                "name": "IMAGES_POKEMON148_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon147.png",
+                "name": "IMAGES_POKEMON147_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon146.png",
+                "name": "IMAGES_POKEMON146_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon145.png",
+                "name": "IMAGES_POKEMON145_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon144.png",
+                "name": "IMAGES_POKEMON144_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon143.png",
+                "name": "IMAGES_POKEMON143_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon142.png",
+                "name": "IMAGES_POKEMON142_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon141.png",
+                "name": "IMAGES_POKEMON141_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon140.png",
+                "name": "IMAGES_POKEMON140_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon14.png",
+                "name": "IMAGES_POKEMON14_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon139.png",
+                "name": "IMAGES_POKEMON139_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon138.png",
+                "name": "IMAGES_POKEMON138_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon137.png",
+                "name": "IMAGES_POKEMON137_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon136.png",
+                "name": "IMAGES_POKEMON136_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon135.png",
+                "name": "IMAGES_POKEMON135_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon134.png",
+                "name": "IMAGES_POKEMON134_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon133.png",
+                "name": "IMAGES_POKEMON133_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon132.png",
+                "name": "IMAGES_POKEMON132_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon131.png",
+                "name": "IMAGES_POKEMON131_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon130.png",
+                "name": "IMAGES_POKEMON130_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon13.png",
+                "name": "IMAGES_POKEMON13_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon129.png",
+                "name": "IMAGES_POKEMON129_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon128.png",
+                "name": "IMAGES_POKEMON128_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon127.png",
+                "name": "IMAGES_POKEMON127_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon126.png",
+                "name": "IMAGES_POKEMON126_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon125.png",
+                "name": "IMAGES_POKEMON125_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon124.png",
+                "name": "IMAGES_POKEMON124_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon123.png",
+                "name": "IMAGES_POKEMON123_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon122.png",
+                "name": "IMAGES_POKEMON122_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon121.png",
+                "name": "IMAGES_POKEMON121_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon120.png",
+                "name": "IMAGES_POKEMON120_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon12.png",
+                "name": "IMAGES_POKEMON12_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon119.png",
+                "name": "IMAGES_POKEMON119_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon118.png",
+                "name": "IMAGES_POKEMON118_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon117.png",
+                "name": "IMAGES_POKEMON117_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon116.png",
+                "name": "IMAGES_POKEMON116_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon115.png",
+                "name": "IMAGES_POKEMON115_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon114.png",
+                "name": "IMAGES_POKEMON114_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon113.png",
+                "name": "IMAGES_POKEMON113_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon112.png",
+                "name": "IMAGES_POKEMON112_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon111.png",
+                "name": "IMAGES_POKEMON111_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon110.png",
+                "name": "IMAGES_POKEMON110_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon11.png",
+                "name": "IMAGES_POKEMON11_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon109.png",
+                "name": "IMAGES_POKEMON109_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon108.png",
+                "name": "IMAGES_POKEMON108_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon107.png",
+                "name": "IMAGES_POKEMON107_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon106.png",
+                "name": "IMAGES_POKEMON106_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon105.png",
+                "name": "IMAGES_POKEMON105_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon104.png",
+                "name": "IMAGES_POKEMON104_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon103.png",
+                "name": "IMAGES_POKEMON103_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon102.png",
+                "name": "IMAGES_POKEMON102_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon101.png",
+                "name": "IMAGES_POKEMON101_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon100.png",
+                "name": "IMAGES_POKEMON100_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon10.png",
+                "name": "IMAGES_POKEMON10_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon1.png",
+                "name": "IMAGES_POKEMON1_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon99.png",
+                "name": "IMAGES_POKEMON99_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon98.png",
+                "name": "IMAGES_POKEMON98_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon97.png",
+                "name": "IMAGES_POKEMON97_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon96.png",
+                "name": "IMAGES_POKEMON96_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon95.png",
+                "name": "IMAGES_POKEMON95_PNG",
                 "type": "png"
             }
         ]
