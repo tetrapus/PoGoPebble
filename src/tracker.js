@@ -18,9 +18,6 @@ function updatePokemon(panel, pos, new_pokemon) {
   if (pokemonEl !== null) {
     panel.remove(pokemonEl);
   }
-  if (distanceEl !== null) {
-    panel.remove(distanceEl);
-  }
   if (new_pokemon !== null) {
     pokemonEl = new UI.Image({
       position: new Vector2(0, 0),
@@ -30,20 +27,44 @@ function updatePokemon(panel, pos, new_pokemon) {
     });
     pokemon = new_pokemon;
     console.log(Distance.distance(pos, new_pokemon) + "m");
-    distanceEl = new UI.Text({
-      text: Math.round(Distance.distance(pos, new_pokemon)) + "m",
-      position: new Vector2(12, 130),
-      size: new Vector2(120, 44),
-      font: 'gothic-28-bold',
-      textAlign: 'center'
-    });
     panel.add(pokemonEl);
-    panel.add(distanceEl);
+    updateDistance(panel, pos);
   } else {
     pokemon = null;
     pokemonEl = null;
-    distanceEl = null;
+    clearDistance(panel);
   }
 }
 
-this.exports = {setPokemon: updatePokemon};
+function updateDistance(panel, pos) {
+  if (distanceEl !== null) {
+    panel.remove(distanceEl);
+  }
+  distanceEl = new UI.Text({
+    text: Math.round(Distance.distance(pos, pokemon)) + "m",
+    position: new Vector2(12, 130),
+    size: new Vector2(120, 44),
+    font: 'gothic-28-bold',
+    textAlign: 'center'
+  });
+  panel.add(distanceEl);
+}
+
+function clearDistance(panel) {
+  if (distanceEl !== null) {
+    panel.remove(distanceEl);
+  }
+  distanceEl = null;
+}
+
+function draw(panel, pos, pokemon) {
+  if (pokemon.length) {
+    updatePokemon(panel, pos, pokemon[0]);
+  } else {
+    updatePokemon(panel, pos, null);
+  }
+}
+
+this.exports = {
+  draw: draw
+};

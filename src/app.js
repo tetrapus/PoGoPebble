@@ -8,9 +8,7 @@ var ajax = require('ajax');
 
 var Distance = require('distance');
 
-var Nearby = require('nearby');
-var Tracker = require('tracker');
-var Compass = require('compass');
+var View = require('render');
 
 var panel = new UI.Window();
 
@@ -25,48 +23,52 @@ var geolocation_options = {
   maximumAge: 10000
 };
 
+var position = null;
+var pokemon = [];
 
-function refreshData(panel, pos) {
-  console.log('lat= ' + pos.coords.latitude + ' lon= ' + pos.coords.longitude);
+function setPosition(pos) {
+  position = pos;
+  pokemon.sort(function(a, b) {
+    return Distance.distance(position.coords, a) - Distance.distance(position.coords, b);
+  });
+  View.draw(panel, position, pokemon);
+}
+
+function updatePokemon() {
   ajax(
     {
-      url: 'https://pokevision.com/map/data/' + pos.coords.latitude + '/' + pos.coords.longitude,
+      url: 'https://pokevision.com/map/data/' + position.coords.latitude + '/' + position.coords.longitude,
       type: 'json'
     },
     function(data, status, req) {
       console.log(data.pokemon.length);
-      if (data.pokemon.length) {
-        data.pokemon.sort(function(a, b) {
-          return Distance.distance(pos.coords, a) - Distance.distance(pos.coords, b);
-        });
-        Tracker.setPokemon(panel, pos.coords, data.pokemon[0]);
-      } else {
-        Tracker.setPokemon(panel, pos.coords, null);
-      }
+      pokemon = data.pokemon;
+      pokemon.sort(function(a, b) {
+        return Distance.distance(position.coords, a) - Distance.distance(position.coords, b);
+      });
+      
+      panel.on('click', 'select', updatePokemon);
+      
+      navigator.geolocation.watchPosition(
+        setPosition,
+        function() { console.log('fetch location failed'); },
+        geolocation_options
+      );
+      View.draw(panel, position, pokemon);
     }
   );
 }
 
-function refreshLocation() {
-  navigator.geolocation.getCurrentPosition(
-    function(pos) { refreshData(panel, pos); },
-    function() { console.log('fetch location failed'); },
-    geolocation_options
-  );
-}
-
-panel.add(background);
-Compass.draw(panel);
-Nearby.draw(panel, [1]);
-panel.show();
-
-refreshLocation();
-
-panel.on('click', 'select', refreshLocation);
-/*
-navigator.geolocation.watchPosition(
-  function(pos) { refreshData(panel, pos); },
+// Initialise vars
+navigator.geolocation.getCurrentPosition(
+  function(pos) {
+    position = pos;
+    updatePokemon();
+  },
   function() { console.log('fetch location failed'); },
   geolocation_options
 );
-*/
+
+panel.add(background);
+panel.show();
+
