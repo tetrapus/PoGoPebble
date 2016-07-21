@@ -22,9 +22,9 @@ function updatePokemon(panel, pos, new_pokemon) {
   }
   if (new_pokemon !== null) {
     pokemonEl = new UI.Image({
-      position: new Vector2(-144*(new_pokemon.pokemonId % 3), 0),
-      size: new Vector2(144*3, 168),
-      image: 'images/test.png',
+      position: new Vector2(-144*(new_pokemon.pokemonId % 2), 0),
+      size: new Vector2(288, 168),
+      image: 'images/main_'+Math.floor(new_pokemon.pokemonId/2)+'.png',
       compositing: 'set'
     });
     pokemon = new_pokemon;
