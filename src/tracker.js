@@ -12,6 +12,8 @@ var distanceEl = null;
 var pokemon = null;
 
 function updatePokemon(panel, pos, new_pokemon) {
+  console.log(pos);
+  console.log(new_pokemon);
   if (new_pokemon !== null && (pokemon === null || new_pokemon.id !== pokemon.id)) {
     Vibe.vibrate();
   }
@@ -20,15 +22,15 @@ function updatePokemon(panel, pos, new_pokemon) {
   }
   if (new_pokemon !== null) {
     pokemonEl = new UI.Image({
-      position: new Vector2(0, 0),
-      size: new Vector2(144, 168),
-      image: 'images/main93.png',
+      position: new Vector2(-144*(new_pokemon.pokemonId % 3), 0),
+      size: new Vector2(144*3, 168),
+      image: 'images/test.png',
       compositing: 'set'
     });
     pokemon = new_pokemon;
     console.log(Distance.distance(pos, new_pokemon) + "m");
     panel.add(pokemonEl);
-    updateDistance(panel, pos);
+    updateDistance(panel, pos, pokemon);
   } else {
     pokemon = null;
     pokemonEl = null;
@@ -36,7 +38,7 @@ function updatePokemon(panel, pos, new_pokemon) {
   }
 }
 
-function updateDistance(panel, pos) {
+function updateDistance(panel, pos, pokemon) {
   if (distanceEl !== null) {
     panel.remove(distanceEl);
   }

@@ -30,6 +30,21 @@
                 "type": "font"
             },
             {
+                "file": "images/pokemon97.png",
+                "name": "IMAGES_POKEMON97_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon96.png",
+                "name": "IMAGES_POKEMON96_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon95.png",
+                "name": "IMAGES_POKEMON95_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/pokemon94.png",
                 "name": "IMAGES_POKEMON94_PNG",
                 "type": "png"
@@ -757,31 +772,6 @@
             {
                 "file": "images/pokemon1.png",
                 "name": "IMAGES_POKEMON1_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon99.png",
-                "name": "IMAGES_POKEMON99_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon98.png",
-                "name": "IMAGES_POKEMON98_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon97.png",
-                "name": "IMAGES_POKEMON97_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon96.png",
-                "name": "IMAGES_POKEMON96_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon95.png",
-                "name": "IMAGES_POKEMON95_PNG",
                 "type": "png"
             },
             {

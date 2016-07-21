@@ -28,7 +28,7 @@ function drawPokemon(pokemon) {
     var pokemonEl = new UI.Image({
       position: new Vector2(SCREEN_WIDTH - (SPRITE_WIDTH * (i + 1)), 0),
       size: new Vector2(SPRITE_WIDTH, SPRITE_WIDTH),
-      image: 'images/placeholder32.png',
+      image: 'images/pokemon'+pokemon[i].pokemonID+'.png',
       compositing: 'set'
     });
     elements.push(pokemonEl);
