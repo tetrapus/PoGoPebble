@@ -30,16 +30,6 @@
                 "type": "font"
             },
             {
-                "file": "images/placeholder32.png",
-                "name": "IMAGES_PLACEHOLDER32_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/main_125.png",
-                "name": "IMAGES_MAIN_125_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/pokemon94.png",
                 "name": "IMAGES_POKEMON94_PNG",
                 "type": "png"
@@ -792,6 +782,761 @@
             {
                 "file": "images/pokemon95.png",
                 "name": "IMAGES_POKEMON95_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main94.png",
+                "name": "IMAGES_MAIN94_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main93.png",
+                "name": "IMAGES_MAIN93_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main92.png",
+                "name": "IMAGES_MAIN92_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main91.png",
+                "name": "IMAGES_MAIN91_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main90.png",
+                "name": "IMAGES_MAIN90_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main9.png",
+                "name": "IMAGES_MAIN9_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main89.png",
+                "name": "IMAGES_MAIN89_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main88.png",
+                "name": "IMAGES_MAIN88_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main87.png",
+                "name": "IMAGES_MAIN87_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main86.png",
+                "name": "IMAGES_MAIN86_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main85.png",
+                "name": "IMAGES_MAIN85_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main84.png",
+                "name": "IMAGES_MAIN84_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main83.png",
+                "name": "IMAGES_MAIN83_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main82.png",
+                "name": "IMAGES_MAIN82_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main81.png",
+                "name": "IMAGES_MAIN81_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main80.png",
+                "name": "IMAGES_MAIN80_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main8.png",
+                "name": "IMAGES_MAIN8_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main79.png",
+                "name": "IMAGES_MAIN79_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main78.png",
+                "name": "IMAGES_MAIN78_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main77.png",
+                "name": "IMAGES_MAIN77_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main76.png",
+                "name": "IMAGES_MAIN76_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main75.png",
+                "name": "IMAGES_MAIN75_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main74.png",
+                "name": "IMAGES_MAIN74_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main73.png",
+                "name": "IMAGES_MAIN73_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main72.png",
+                "name": "IMAGES_MAIN72_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main71.png",
+                "name": "IMAGES_MAIN71_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main70.png",
+                "name": "IMAGES_MAIN70_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main7.png",
+                "name": "IMAGES_MAIN7_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main69.png",
+                "name": "IMAGES_MAIN69_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main68.png",
+                "name": "IMAGES_MAIN68_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main67.png",
+                "name": "IMAGES_MAIN67_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main66.png",
+                "name": "IMAGES_MAIN66_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main65.png",
+                "name": "IMAGES_MAIN65_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main64.png",
+                "name": "IMAGES_MAIN64_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main63.png",
+                "name": "IMAGES_MAIN63_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main62.png",
+                "name": "IMAGES_MAIN62_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main61.png",
+                "name": "IMAGES_MAIN61_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main60.png",
+                "name": "IMAGES_MAIN60_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main6.png",
+                "name": "IMAGES_MAIN6_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main59.png",
+                "name": "IMAGES_MAIN59_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main58.png",
+                "name": "IMAGES_MAIN58_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main57.png",
+                "name": "IMAGES_MAIN57_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main56.png",
+                "name": "IMAGES_MAIN56_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main55.png",
+                "name": "IMAGES_MAIN55_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main54.png",
+                "name": "IMAGES_MAIN54_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main53.png",
+                "name": "IMAGES_MAIN53_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main52.png",
+                "name": "IMAGES_MAIN52_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main51.png",
+                "name": "IMAGES_MAIN51_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main50.png",
+                "name": "IMAGES_MAIN50_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main5.png",
+                "name": "IMAGES_MAIN5_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main49.png",
+                "name": "IMAGES_MAIN49_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main48.png",
+                "name": "IMAGES_MAIN48_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main47.png",
+                "name": "IMAGES_MAIN47_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main46.png",
+                "name": "IMAGES_MAIN46_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main45.png",
+                "name": "IMAGES_MAIN45_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main44.png",
+                "name": "IMAGES_MAIN44_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main43.png",
+                "name": "IMAGES_MAIN43_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main42.png",
+                "name": "IMAGES_MAIN42_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main41.png",
+                "name": "IMAGES_MAIN41_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main40.png",
+                "name": "IMAGES_MAIN40_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main4.png",
+                "name": "IMAGES_MAIN4_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main39.png",
+                "name": "IMAGES_MAIN39_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main38.png",
+                "name": "IMAGES_MAIN38_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main37.png",
+                "name": "IMAGES_MAIN37_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main36.png",
+                "name": "IMAGES_MAIN36_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main35.png",
+                "name": "IMAGES_MAIN35_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main34.png",
+                "name": "IMAGES_MAIN34_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main33.png",
+                "name": "IMAGES_MAIN33_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main32.png",
+                "name": "IMAGES_MAIN32_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main31.png",
+                "name": "IMAGES_MAIN31_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main30.png",
+                "name": "IMAGES_MAIN30_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main3.png",
+                "name": "IMAGES_MAIN3_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main29.png",
+                "name": "IMAGES_MAIN29_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main28.png",
+                "name": "IMAGES_MAIN28_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main27.png",
+                "name": "IMAGES_MAIN27_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main26.png",
+                "name": "IMAGES_MAIN26_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main25.png",
+                "name": "IMAGES_MAIN25_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main24.png",
+                "name": "IMAGES_MAIN24_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main23.png",
+                "name": "IMAGES_MAIN23_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main22.png",
+                "name": "IMAGES_MAIN22_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main21.png",
+                "name": "IMAGES_MAIN21_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main20.png",
+                "name": "IMAGES_MAIN20_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main2.png",
+                "name": "IMAGES_MAIN2_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main19.png",
+                "name": "IMAGES_MAIN19_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main18.png",
+                "name": "IMAGES_MAIN18_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main17.png",
+                "name": "IMAGES_MAIN17_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main16.png",
+                "name": "IMAGES_MAIN16_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main151.png",
+                "name": "IMAGES_MAIN151_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main150.png",
+                "name": "IMAGES_MAIN150_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main15.png",
+                "name": "IMAGES_MAIN15_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main149.png",
+                "name": "IMAGES_MAIN149_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main148.png",
+                "name": "IMAGES_MAIN148_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main147.png",
+                "name": "IMAGES_MAIN147_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main146.png",
+                "name": "IMAGES_MAIN146_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main145.png",
+                "name": "IMAGES_MAIN145_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main144.png",
+                "name": "IMAGES_MAIN144_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main143.png",
+                "name": "IMAGES_MAIN143_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main142.png",
+                "name": "IMAGES_MAIN142_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main141.png",
+                "name": "IMAGES_MAIN141_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main140.png",
+                "name": "IMAGES_MAIN140_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main14.png",
+                "name": "IMAGES_MAIN14_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main139.png",
+                "name": "IMAGES_MAIN139_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main138.png",
+                "name": "IMAGES_MAIN138_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main137.png",
+                "name": "IMAGES_MAIN137_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main136.png",
+                "name": "IMAGES_MAIN136_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main135.png",
+                "name": "IMAGES_MAIN135_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main134.png",
+                "name": "IMAGES_MAIN134_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main133.png",
+                "name": "IMAGES_MAIN133_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main132.png",
+                "name": "IMAGES_MAIN132_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main131.png",
+                "name": "IMAGES_MAIN131_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main130.png",
+                "name": "IMAGES_MAIN130_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main13.png",
+                "name": "IMAGES_MAIN13_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main129.png",
+                "name": "IMAGES_MAIN129_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main128.png",
+                "name": "IMAGES_MAIN128_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main127.png",
+                "name": "IMAGES_MAIN127_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main126.png",
+                "name": "IMAGES_MAIN126_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main125.png",
+                "name": "IMAGES_MAIN125_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main124.png",
+                "name": "IMAGES_MAIN124_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main123.png",
+                "name": "IMAGES_MAIN123_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main122.png",
+                "name": "IMAGES_MAIN122_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main121.png",
+                "name": "IMAGES_MAIN121_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main120.png",
+                "name": "IMAGES_MAIN120_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main12.png",
+                "name": "IMAGES_MAIN12_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main119.png",
+                "name": "IMAGES_MAIN119_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main118.png",
+                "name": "IMAGES_MAIN118_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main117.png",
+                "name": "IMAGES_MAIN117_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main116.png",
+                "name": "IMAGES_MAIN116_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main115.png",
+                "name": "IMAGES_MAIN115_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main114.png",
+                "name": "IMAGES_MAIN114_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main113.png",
+                "name": "IMAGES_MAIN113_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main112.png",
+                "name": "IMAGES_MAIN112_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main111.png",
+                "name": "IMAGES_MAIN111_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main110.png",
+                "name": "IMAGES_MAIN110_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main11.png",
+                "name": "IMAGES_MAIN11_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main109.png",
+                "name": "IMAGES_MAIN109_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main108.png",
+                "name": "IMAGES_MAIN108_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main107.png",
+                "name": "IMAGES_MAIN107_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main106.png",
+                "name": "IMAGES_MAIN106_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main105.png",
+                "name": "IMAGES_MAIN105_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main104.png",
+                "name": "IMAGES_MAIN104_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main103.png",
+                "name": "IMAGES_MAIN103_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main102.png",
+                "name": "IMAGES_MAIN102_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main101.png",
+                "name": "IMAGES_MAIN101_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main100.png",
+                "name": "IMAGES_MAIN100_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main10.png",
+                "name": "IMAGES_MAIN10_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main1.png",
+                "name": "IMAGES_MAIN1_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main99.png",
+                "name": "IMAGES_MAIN99_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main98.png",
+                "name": "IMAGES_MAIN98_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main97.png",
+                "name": "IMAGES_MAIN97_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main96.png",
+                "name": "IMAGES_MAIN96_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/main95.png",
+                "name": "IMAGES_MAIN95_PNG",
                 "type": "png"
             }
         ]
