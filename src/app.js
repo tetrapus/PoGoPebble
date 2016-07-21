@@ -10,6 +10,7 @@ var Distance = require('distance');
 
 var Nearby = require('nearby');
 var Tracker = require('tracker');
+var Compass = require('compass');
 
 var panel = new UI.Window();
 
@@ -17,18 +18,6 @@ var background = new UI.Rect({
   position: new Vector2(0, 0),
   size: new Vector2(144, 168),
   backgroundColor: 'blue',
-});
-
-var circle = new UI.Circle({
-  position: new Vector2(72, 84),
-  radius: 32,
-  backgroundColor: 'white',
-});
-
-var compass = new UI.Circle({
-  position: new Vector2(35, 42),
-  radius: 2,
-  backgroundColor: 'white'
 });
 
 var geolocation_options = {
@@ -67,9 +56,8 @@ function refreshLocation() {
 }
 
 panel.add(background);
-panel.add(circle);
-panel.add(compass);
-Nearby.draw(panel);
+Compass.draw(panel);
+Nearby.draw(panel, [1]);
 panel.show();
 
 refreshLocation();
