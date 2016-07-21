@@ -25,6 +25,12 @@ var circle = new UI.Circle({
   backgroundColor: 'white',
 });
 
+var compass = new UI.Circle({
+  position: new Vector2(35, 42),
+  radius: 2,
+  backgroundColor: 'white'
+});
+
 var geolocation_options = {
   enableHighAccuracy: true,
   maximumAge: 10000
@@ -62,6 +68,7 @@ function refreshLocation() {
 
 panel.add(background);
 panel.add(circle);
+panel.add(compass);
 Nearby.draw(panel);
 panel.show();
 

@@ -30,6 +30,11 @@
                 "type": "font"
             },
             {
+                "file": "images/placeholder32.png",
+                "name": "IMAGES_PLACEHOLDER32_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/main_125.png",
                 "name": "IMAGES_MAIN_125_PNG",
                 "type": "png"
