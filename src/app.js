@@ -19,7 +19,6 @@ var background = new UI.Rect({
 });
 
 var geolocation_options = {
-  enableHighAccuracy: true,
   maximumAge: 10000
 };
 
@@ -49,11 +48,11 @@ function updatePokemon() {
       
       panel.on('click', 'select', updatePokemon);
       
-      navigator.geolocation.watchPosition(
+      /*navigator.geolocation.watchPosition(
         setPosition,
         function() { console.log('fetch location failed'); },
         geolocation_options
-      );
+      );*/
       View.draw(panel, position, pokemon);
     }
   );

@@ -1,11 +1,8 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
-var body = new UI.Circle({
-  position: new Vector2(72, 84),
-  radius: 32,
-  backgroundColor: 'white',
-});
+
+var body = null;
 /*
 var needle = new UI.Circle({
   position: new Vector2(45, 52),
@@ -14,7 +11,14 @@ var needle = new UI.Circle({
 });*/
 
 function draw(panel) {
-  panel.add(body);
+  if (body === null) {
+    body = new UI.Circle({
+      position: new Vector2(72, 84),
+      radius: 32,
+      backgroundColor: 'white',
+    });
+    panel.add(body);
+  }
   // panel.add(needle); 
 }
 
