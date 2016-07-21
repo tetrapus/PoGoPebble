@@ -30,6 +30,11 @@
                 "type": "font"
             },
             {
+                "file": "images/main_125.png",
+                "name": "IMAGES_MAIN_125_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/pokemon94.png",
                 "name": "IMAGES_POKEMON94_PNG",
                 "type": "png"

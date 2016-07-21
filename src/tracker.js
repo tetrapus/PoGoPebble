@@ -25,16 +25,17 @@ function updatePokemon(panel, pos, new_pokemon) {
     pokemonEl = new UI.Image({
       position: new Vector2(0, 0),
       size: new Vector2(144, 168),
-      image: 'images/pokemon' + new_pokemon.pokemonId + '.png',
+      image: 'images/main_125.png', // 'images/pokemon' + new_pokemon.pokemonId + '.png',
       compositing: 'set'
     });
     pokemon = new_pokemon;
     console.log(Distance.distance(pos, new_pokemon) + "m");
     distanceEl = new UI.Text({
-      text: Distance.distance(pos, new_pokemon).toFixed(1) + "m",
-      position: new Vector2(0, 124),
-      size: new Vector2(144, 44),
+      text: Math.round(Distance.distance(pos, new_pokemon)) + "m",
+      position: new Vector2(12, 130),
+      size: new Vector2(120, 44),
       font: 'gothic-28-bold',
+      textAlign: 'center'
     });
     panel.add(pokemonEl);
     panel.add(distanceEl);
