@@ -3,6 +3,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 
 var Distance = require('distance');
+var Themes = require('themes');
 
 var Constants = require('constants');
 
@@ -78,6 +79,7 @@ function clearPokemon() {
 function updateDistance(pos, pokemon) {
   console.log("Call: Tracker.updateDistance");
   elements.distance.text(Math.round(Distance.distance(pos, pokemon)) + "m");
+  elements.distance.color(Themes.currentTheme().textColour);
 }
 
 function clearDistance() {

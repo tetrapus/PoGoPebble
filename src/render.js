@@ -6,17 +6,19 @@ var Nearby = require('nearby');
 var Tracker = require('tracker');
 
 var Constants = require('constants');
+var Themes = require('themes');
 
+var background = {};
 
 function init(panel) {
   console.log("Call: View.init");
-  var background = new UI.Rect({
+  background = new UI.Rect({
     position: new Vector2(0, 0),
     size: new Vector2(
       Constants.SCREEN_WIDTH,
       Constants.SCREEN_HEIGHT
     ),
-    backgroundColor: 'yellow',
+    backgroundColor: Themes.currentTheme().backgroundColour,
   });
   panel.add(background);
   Compass.init(panel);
@@ -27,6 +29,8 @@ function init(panel) {
 
 function draw(panel, pos, pokemon) {
   console.log("Call: View.draw");
+  background.backgroundColor(Themes.currentTheme().backgroundColour);
+  
   Compass.draw(pokemon.length);
   Nearby.draw(panel, pokemon);
   Tracker.draw(pos, pokemon);

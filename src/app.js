@@ -45,27 +45,13 @@ var clayConfig = [
   ]
 }
   ]
-  }
+  },
+  {
+  "type": "submit",
+  "defaultValue": "Save"
+}
 ];
 var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
-
-Pebble.addEventListener('showConfiguration', function(e) {
-  console.log("Call: showConfiguration");
-  var url = clay.generateUrl();
-  console.log("url: " + url);
-  Pebble.openURL(url);
-});
-
-Pebble.addEventListener('webviewclosed', function(e) {
-  if (e && !e.response) {
-    return;
-  }
-  var dict = clay.getSettings(e.response);
-  console.log("Call: webviewclosed");
-  // Save the Clay settings to the Settings module. 
-  Settings.option(dict);
-});
-
 
 var panel = new UI.Window();
 
@@ -151,3 +137,18 @@ setInterval(function() {
 panel.on('click', 'select', updatePokemon);
 panel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
 
+Pebble.addEventListener('showConfiguration', function(e) {
+  Pebble.openURL(clay.generateUrl());
+});
+
+Pebble.addEventListener('webviewclosed', function(e) {
+  if (e && !e.response) {
+    return;
+  }
+  var dict = clay.getSettings(e.response);
+  // Save the Clay settings to the Settings module. 
+  Settings.option(dict);
+  
+  // If we changed teams we need to redraw the screen
+  updatePokemon();
+});
