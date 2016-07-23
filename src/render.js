@@ -16,7 +16,7 @@ function init(panel) {
       Constants.SCREEN_WIDTH,
       Constants.SCREEN_HEIGHT
     ),
-    backgroundColor: 'blue',
+    backgroundColor: 'yellow',
   });
   panel.add(background);
   Compass.init(panel);

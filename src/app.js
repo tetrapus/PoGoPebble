@@ -10,6 +10,62 @@ var Distance = require('distance');
 var View = require('render');
 var Constants = require('constants');
 
+var Settings = require('settings');
+var Clay = require('./clay');
+var clayConfig = [
+  {
+  "type": "section",
+  "items": [
+    {
+      "type": "heading",
+      "defaultValue": "Theme"
+    },
+    {
+  "type": "select",
+  "appKey": "team",
+  "defaultValue": "",
+  "label": "Team",
+  "options": [
+    { 
+      "label": "", 
+      "value": "" 
+    },
+    { 
+      "label": "Valor",
+      "value": "valor" 
+    },
+    { 
+      "label": "Mystic",
+      "value": "mystic" 
+    },
+    { 
+      "label": "Instinct",
+      "value": "instinct" 
+    }
+  ]
+}
+  ]
+  }
+];
+var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
+
+Pebble.addEventListener('showConfiguration', function(e) {
+  console.log("Call: showConfiguration");
+  var url = clay.generateUrl();
+  console.log("url: " + url);
+  Pebble.openURL(url);
+});
+
+Pebble.addEventListener('webviewclosed', function(e) {
+  if (e && !e.response) {
+    return;
+  }
+  var dict = clay.getSettings(e.response);
+  console.log("Call: webviewclosed");
+  // Save the Clay settings to the Settings module. 
+  Settings.option(dict);
+});
+
 
 var panel = new UI.Window();
 
