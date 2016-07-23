@@ -150,5 +150,5 @@ Pebble.addEventListener('webviewclosed', function(e) {
   Settings.option(dict);
   
   // If we changed teams we need to redraw the screen
-  updatePokemon();
+  View.draw(panel, position, pokemon);
 });

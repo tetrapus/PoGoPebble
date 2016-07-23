@@ -47,6 +47,9 @@ function clearCompass() {
 
 function draw(what) {
   console.log("Call: Compass.draw");
+  compass.backgroundColor(Themes.currentTheme().textColour);
+  needle.backgroundColor(Themes.currentTheme().textColour);
+  
   if (what) {
     updateCompass();
   } else {
