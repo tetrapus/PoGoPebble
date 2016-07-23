@@ -1,6 +1,7 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 var Constants = require('constants');
+var Themes = require('themes');
 
 var POSITION_MIDDLE = new Vector2(Constants.SCREEN_WIDTH >> 1, Constants.SCREEN_HEIGHT >> 1);
 var FIXME = new Vector2(45, 52);
@@ -8,13 +9,13 @@ var FIXME = new Vector2(45, 52);
 var compass = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: 2,
-  backgroundColor: 'white',
+  backgroundColor: Themes.currentTheme().textColour,
 });
 
 var needle = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: 2,
-  backgroundColor: 'white'
+  backgroundColor: Themes.currentTheme().textColour
 });
 
 var whatever = false;
@@ -46,6 +47,9 @@ function clearCompass() {
 
 function draw(what) {
   console.log("Call: Compass.draw");
+  compass.backgroundColor(Themes.currentTheme().textColour);
+  needle.backgroundColor(Themes.currentTheme().textColour);
+  
   if (what) {
     updateCompass();
   } else {
