@@ -1,8 +1,7 @@
 {
     "appKeys": {},
     "capabilities": [
-        "location",
-        "configurable"
+        "location"
     ],
     "companyName": "Tetrapus",
     "longName": "Pokemon Go Tracker",
@@ -11,6 +10,7 @@
         "media": [
             {
                 "file": "images/menu_icon.png",
+                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "bitmap"
             },
@@ -28,12 +28,6 @@
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
-            },
-            {
-                "file": "images/rare-candy.png",
-                "menuIcon": true,
-                "name": "IMAGES_RARE_CANDY_PNG",
-                "type": "png"
             },
             {
                 "file": "images/pokemon58.png",
@@ -1165,7 +1159,9 @@
     "sdkVersion": "3",
     "shortName": "Pokemon",
     "targetPlatforms": [
-        "basalt"
+        "aplite",
+        "basalt",
+        "chalk"
     ],
     "uuid": "4917e277-a47e-493b-9107-d47ab86e2f3e",
     "versionCode": 1,

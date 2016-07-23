@@ -5,7 +5,7 @@ var Constants = require('constants');
 var POSITION_MIDDLE = new Vector2(Constants.SCREEN_WIDTH >> 1, Constants.SCREEN_HEIGHT >> 1);
 var FIXME = new Vector2(45, 52);
 
-var body = new UI.Circle({
+var compass = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: 2,
   backgroundColor: 'white',
@@ -21,33 +21,37 @@ var whatever = false;
 
 function init(panel) {
   console.log("Call: Compass.init");
-  panel.add(body);
+  panel.add(compass);
   panel.add(needle);
 }
 
 function updateCompass() {
+  console.log("Call: Compass.updateCompass");
   if (!whatever) {
     needle.animate({position: FIXME});
-    body.animate({radius: 32});
+    compass.size(32);
   }
   whatever = true;
   // todo
 }
 
 function clearCompass() {
+  console.log("Call: Compass.clearCompass");
   if (whatever) {
     needle.animate({position: POSITION_MIDDLE});
-    body.animate({radius: 2});
+    compass.size(2);
   }
   whatever = false;
 }
 
 function draw(what) {
+  console.log("Call: Compass.draw");
   if (what) {
-    clearCompass();
-  } else {
     updateCompass();
+  } else {
+    clearCompass();
   }
+  console.log(whatever);
 }
 
 this.exports = {init: init, draw: draw};

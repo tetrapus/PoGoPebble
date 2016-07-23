@@ -27,7 +27,7 @@ function init(panel) {
 
 function draw(panel, pos, pokemon) {
   console.log("Call: View.draw");
-  Compass.draw(pokemon);
+  Compass.draw(pokemon.length);
   Nearby.draw(panel, pokemon);
   Tracker.draw(pos, pokemon);
 }

@@ -88,6 +88,9 @@ function init(panel) {
   panel.add(elem.navbar.background);
   panel.add(elem.navbar.overhang);
   panel.add(elem.navbar.corner);
+  for (var i=0; i<elem.icons.length; i++) {
+    panel.add(elem.icons[i].element);
+  }
 }
 
 function draw(panel, pokemon) {
@@ -109,31 +112,25 @@ function draw(panel, pokemon) {
     }
   }
 
+  nearby = new_nearby;
   drawBackground(nearby.length);
-
   for (i=0; i<elem.icons.length; ++i) {
     // temporary animation
     var element = elem.icons[i].element;
-    element.animate({position: new Vector2(i * SPRITE_WIDTH, -SPRITE_WIDTH)}, 200);
     if (3 - i < nearby.length) {
-      console.log(nearby[3-i]);
+      console.log("drawing");
       drawPokemon(elem.icons[i], nearby[3-i]);
+    } else {
+      element.animate({position: new Vector2(i * SPRITE_WIDTH, -SPRITE_WIDTH)}, 200);
     }
   }
-  nearby = new_nearby;
-  drawPokemon(nearby);
 }
 
 function drawPokemon(icon, pokemon) {
   console.log("Call: Nearby.drawPokemon");
-  console.log('images/pokemon'+pokemon.pokemonId+'.png');
-  icon.element.queue(function (next) {
-    icon.element.image('images/pokemon'+pokemon.pokemonId+'.png');
-    next();
-  }).animate(
-    {position: new Vector2(icon.position * SPRITE_WIDTH, 0)},
-    200
-  );
+  icon.element.animate({position: new Vector2(icon.position * SPRITE_WIDTH, -SPRITE_WIDTH)}, 200);
+  icon.element.queue(function (next) { icon.element.image('images/pokemon'+pokemon.pokemonId+'.png'); next(); });
+  icon.element.animate({position: new Vector2(icon.position * SPRITE_WIDTH, 0)}, 200);
 }
 
 function drawBackground(size) {
@@ -145,6 +142,7 @@ function drawBackground(size) {
     elem.navbar.overhang.animate({position: new Vector2(nav_start_x - SHADOW_HEIGHT, 0)});
     elem.navbar.shadow.animate({position: new Vector2(nav_start_x, NAV_HEIGHT)});
     elem.navbar.shadow_corner.animate({position: new Vector2(nav_start_x, NAV_HEIGHT)});
+    elem.navbar.size = size;
   }
 }
 
