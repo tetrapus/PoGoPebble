@@ -30,7 +30,7 @@ function setPosition(pos) {
   }
 }
 
-var seed = 123;
+var seed = 1292;
 function random(max) {
   seed = (((seed * 214013 + 2531011) >> 16) & 32767);
 

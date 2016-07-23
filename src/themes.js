@@ -7,20 +7,20 @@ var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
 
 var themes = {
   none: {
-    backgroundColor: '#F5F5F5',
-    textColor: '#212121',
+    backgroundColor: '#FFFF00',
+    textColor: '#000000',
   },
   valor: {
-    backgroundColor: '#B71C1C',
+    backgroundColor: '#AA0000',
     textColor: '#ffffff'
   },
   mystic: {
-    backgroundColor: '#01579B',
+    backgroundColor: '#0055FF',
     textColor: '#ffffff'
   },
   instinct: {
     backgroundColor: '#FFC107',
-    textColor: '#212121'
+    textColor: '#000000'
   }
 };
 
