@@ -31,41 +31,6 @@
                 "type": "font"
             },
             {
-                "file": "images/pokemon97.png",
-                "name": "IMAGES_POKEMON97_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon96.png",
-                "name": "IMAGES_POKEMON96_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon95.png",
-                "name": "IMAGES_POKEMON95_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon94.png",
-                "name": "IMAGES_POKEMON94_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon93.png",
-                "name": "IMAGES_POKEMON93_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon92.png",
-                "name": "IMAGES_POKEMON92_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon91.png",
-                "name": "IMAGES_POKEMON91_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/pokemon90.png",
                 "name": "IMAGES_POKEMON90_PNG",
                 "type": "png"
@@ -1154,15 +1119,48 @@
                 "file": "images/main_0.png",
                 "name": "IMAGES_MAIN_0_PNG",
                 "type": "png"
+            },
+            {
+                "file": "images/pokemon97.png",
+                "name": "IMAGES_POKEMON97_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon96.png",
+                "name": "IMAGES_POKEMON96_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon95.png",
+                "name": "IMAGES_POKEMON95_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon94.png",
+                "name": "IMAGES_POKEMON94_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon93.png",
+                "name": "IMAGES_POKEMON93_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon92.png",
+                "name": "IMAGES_POKEMON92_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon91.png",
+                "name": "IMAGES_POKEMON91_PNG",
+                "type": "png"
             }
         ]
     },
     "sdkVersion": "3",
     "shortName": "Pokemon",
     "targetPlatforms": [
-        "aplite",
-        "basalt",
-        "chalk"
+        "basalt"
     ],
     "uuid": "4917e277-a47e-493b-9107-d47ab86e2f3e",
     "versionCode": 1,

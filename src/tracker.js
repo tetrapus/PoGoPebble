@@ -29,12 +29,14 @@ var elements = {
       Constants.DISTANCE_HEIGHT
     ),
     font: 'gothic-28-bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    color: Themes.currentTheme().textColor
   })
 };
 
 function init(panel) {
   console.log("Call: Tracker.init");
+  Themes.watchUpdate(updateTheme);
   panel.add(elements.pokemon);
   panel.add(elements.distance);
 }
@@ -79,7 +81,6 @@ function clearPokemon() {
 function updateDistance(pos, pokemon) {
   console.log("Call: Tracker.updateDistance");
   elements.distance.text(Math.round(Distance.distance(pos, pokemon)) + "m");
-  elements.distance.color(Themes.currentTheme().textColour);
 }
 
 function clearDistance() {
@@ -94,6 +95,10 @@ function draw(pos, pokemon) {
   } else {
     clearPokemon();
   }
+}
+
+function updateTheme(theme) {
+  elements.distance.color(theme.textColor);
 }
 
 this.exports = {

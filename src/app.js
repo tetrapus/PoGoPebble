@@ -9,11 +9,7 @@ var Distance = require('distance');
 
 var View = require('render');
 var Constants = require('constants');
-
-var Settings = require('settings');
-var Clay = require('./clay');
-var clayConfig = require('./config');
-var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
+var Themes = require('themes');
 
 var panel = new UI.Window();
 
@@ -71,6 +67,7 @@ function updatePokemon() {
   );
 }
 
+Themes.init();
 View.init(panel);
 
 // Initialise vars
@@ -98,19 +95,3 @@ setInterval(function() {
 
 panel.on('click', 'select', updatePokemon);
 panel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
-
-Pebble.addEventListener('showConfiguration', function(e) {
-  Pebble.openURL(clay.generateUrl());
-});
-
-Pebble.addEventListener('webviewclosed', function(e) {
-  if (e && !e.response) {
-    return;
-  }
-  var dict = clay.getSettings(e.response);
-  // Save the Clay settings to the Settings module. 
-  Settings.option(dict);
-  
-  // If we changed teams we need to redraw the screen
-  View.draw(panel, position, pokemon);
-});
