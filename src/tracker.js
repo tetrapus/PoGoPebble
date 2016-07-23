@@ -4,69 +4,97 @@ var Vector2 = require('vector2');
 
 var Distance = require('distance');
 
+var Constants = require('constants');
+
 
 // Elements
-var pokemonEl = null;
-var distanceEl = null;
+var elements = {
+  pokemon: new UI.Image({
+    position: new Vector2(0, 0),
+    size: new Vector2(
+      Constants.SCREEN_WIDTH * Constants.SPRITE_ELEMS,
+      Constants.SCREEN_HEIGHT
+    ),
+    image: 'images/main_0.png',
+    compositing: 'set'
+  }),
+  distance: new UI.Text({
+    position: new Vector2(
+      Constants.DISTANCE_HPAD,
+      Constants.SCREEN_HEIGHT - Constants.DISTANCE_HEIGHT
+    ),
+    size: new Vector2(
+      Constants.SCREEN_WIDTH - 2 * (Constants.DISTANCE_HPAD),
+      Constants.DISTANCE_HEIGHT
+    ),
+    font: 'gothic-28-bold',
+    textAlign: 'center'
+  })
+};
+
+function init(panel) {
+  console.log("Call: Tracker.init");
+  panel.add(elements.pokemon);
+  panel.add(elements.distance);
+}
+
 
 var pokemon = null;
 
-function updatePokemon(panel, pos, new_pokemon) {
-  console.log(pos);
-  console.log(new_pokemon);
-  if (new_pokemon !== null && (pokemon === null || new_pokemon.id !== pokemon.id)) {
-    Vibe.vibrate();
-  }
-  if (pokemonEl !== null) {
-    panel.remove(pokemonEl);
-  }
-  if (new_pokemon !== null) {
-    pokemonEl = new UI.Image({
-      position: new Vector2(-144*(new_pokemon.pokemonId % 2), 0),
-      size: new Vector2(288, 168),
-      image: 'images/main_'+Math.floor(new_pokemon.pokemonId/2)+'.png',
-      compositing: 'set'
-    });
+function updatePokemon(pos, new_pokemon) {
+  console.log("Call: Tracker.updatePokemon");
+  if (pokemon === null || new_pokemon.id !== pokemon.id) {
+    if (pokemon === null || pokemon.pokemonId !== new_pokemon.pokemonId) {
+      Vibe.vibrate();
+    }
+
     pokemon = new_pokemon;
-    console.log(Distance.distance(pos, new_pokemon) + "m");
-    panel.add(pokemonEl);
-    updateDistance(panel, pos, pokemon);
-  } else {
+
+    var sprite = 'images/main_' + Math.floor(pokemon.pokemonId / Constants.SPRITE_ELEMS) + '.png';
+    var position = new Vector2(
+      -Constants.SCREEN_WIDTH * (pokemon.pokemonId % Constants.SPRITE_ELEMS),
+      0
+    );
+    console.log(sprite);
+    console.log(pokemon.pokemonId);
+    elements.pokemon.position(position);
+    elements.pokemon.image(sprite);
+  }
+  
+  console.log(Distance.distance(pos, pokemon) + "m");
+  updateDistance(pos, pokemon);
+}
+
+function clearPokemon() {
+  console.log("Call: Tracker.clearPokemon");
+  if (pokemon !== null) {
+    elements.pokemon.image('images/main_0.png');
+    elements.pokemon.position(new Vector2(0, 0));
     pokemon = null;
-    pokemonEl = null;
-    clearDistance(panel);
+    clearDistance(); 
   }
 }
 
-function updateDistance(panel, pos, pokemon) {
-  if (distanceEl !== null) {
-    panel.remove(distanceEl);
-  }
-  distanceEl = new UI.Text({
-    text: Math.round(Distance.distance(pos, pokemon)) + "m",
-    position: new Vector2(12, 130),
-    size: new Vector2(120, 44),
-    font: 'gothic-28-bold',
-    textAlign: 'center'
-  });
-  panel.add(distanceEl);
+function updateDistance(pos, pokemon) {
+  console.log("Call: Tracker.updateDistance");
+  elements.distance.text(Math.round(Distance.distance(pos, pokemon)) + "m");
 }
 
-function clearDistance(panel) {
-  if (distanceEl !== null) {
-    panel.remove(distanceEl);
-  }
-  distanceEl = null;
+function clearDistance() {
+  console.log("Call: Tracker.clearDistance");
+  elements.distance.text('');
 }
 
-function draw(panel, pos, pokemon) {
+function draw(pos, pokemon) {
+  console.log("Call: Tracker.draw");
   if (pokemon.length) {
-    updatePokemon(panel, pos, pokemon[0]);
+    updatePokemon(pos.coords, pokemon[0]);
   } else {
-    updatePokemon(panel, pos, null);
+    clearPokemon();
   }
 }
 
 this.exports = {
-  draw: draw
+  draw: draw,
+  init: init
 };

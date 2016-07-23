@@ -3,72 +3,84 @@
  */
 
 var UI = require('ui');
-var Vector2 = require('vector2');
 var ajax = require('ajax');
 
 var Distance = require('distance');
 
 var View = require('render');
+var Constants = require('constants');
+
 
 var panel = new UI.Window();
-
-var background = new UI.Rect({
-  position: new Vector2(0, 0),
-  size: new Vector2(144, 168),
-  backgroundColor: 'blue',
-});
-
-var geolocation_options = {
-  maximumAge: 10000
-};
 
 var position = null;
 var pokemon = [];
 
+
 function setPosition(pos) {
-  position = pos;
-  pokemon.sort(function(a, b) {
-    return Distance.distance(position.coords, a) - Distance.distance(position.coords, b);
-  });
-  View.draw(panel, position, pokemon);
+  console.log("Call: setPosition");
+  // Ignore location updates under 10m
+  if (position === null || Distance.distance(position, pos) > 10) {
+    position = pos;
+    pokemon.sort(function(a, b) {
+      return Distance.distance(position.coords, a) - Distance.distance(position.coords, b);
+    });
+    View.draw(panel, position, pokemon);
+  }
+}
+
+var seed = 100;
+function random(max) {
+  seed = (((seed * 214013 + 2531011) >> 16) & 32767);
+
+  return seed % max;
 }
 
 function updatePokemon() {
+  console.log("Call: updatePokemon");
   ajax(
     {
       url: 'https://pokevision.com/map/data/' + position.coords.latitude + '/' + position.coords.longitude,
-      type: 'json'
+      //type: 'json'
     },
     function(data, status, req) {
-      data = {"status":"success","pokemon":[{"id":"14152022","data":"[]","expiration_time":1469106527,"pokemonId":"19","latitude":-33.899361575357,"longitude":151.21056290263,"uid":"6b12b1e7b8f:46","is_alive":true},{"id":"14255985","data":"[]","expiration_time":1469106539,"pokemonId":"13","latitude":-33.899007263424,"longitude":151.21356817163,"uid":"6b12b1e6495:13","is_alive":true}]};
+      data = {pokemon: []};
+      for (var i=0; i<random(5); i++) {
+        var id = random(151) + 1;
+        data.pokemon.push(
+          {id: id, pokemonId: id, latitude: position.coords.latitude + random(100)/100, longitude: position.coords.longitude + random(100)/100}
+        );
+      }
       console.log(data.pokemon.length);
       pokemon = data.pokemon;
       pokemon.sort(function(a, b) {
         return Distance.distance(position.coords, a) - Distance.distance(position.coords, b);
       });
       
-      /*navigator.geolocation.watchPosition(
-        setPosition,
-        function() { console.log('fetch location failed'); },
-        geolocation_options
-      );*/
       View.draw(panel, position, pokemon);
     }
   );
 }
 
+View.init(panel);
+
 // Initialise vars
 navigator.geolocation.getCurrentPosition(
   function(pos) {
+    console.log("Initialised location");
     position = pos;
     updatePokemon();
   },
   function() { console.log('fetch location failed'); },
-  geolocation_options
+  Constants.Geolocation.OPTIONS
 );
 
-panel.on('click', 'select', updatePokemon);
+navigator.geolocation.watchPosition(
+  setPosition,
+  function() { console.log('fetch location failed'); },
+  Constants.Geolocation.OPTIONS
+);
 
-panel.add(background);
-panel.show();
+
+panel.on('click', 'select', updatePokemon);
 
