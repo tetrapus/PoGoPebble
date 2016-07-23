@@ -12,45 +12,7 @@ var Constants = require('constants');
 
 var Settings = require('settings');
 var Clay = require('./clay');
-var clayConfig = [
-  {
-  "type": "section",
-  "items": [
-    {
-      "type": "heading",
-      "defaultValue": "Theme"
-    },
-    {
-  "type": "select",
-  "appKey": "team",
-  "defaultValue": "",
-  "label": "Team",
-  "options": [
-    { 
-      "label": "", 
-      "value": "" 
-    },
-    { 
-      "label": "Valor",
-      "value": "valor" 
-    },
-    { 
-      "label": "Mystic",
-      "value": "mystic" 
-    },
-    { 
-      "label": "Instinct",
-      "value": "instinct" 
-    }
-  ]
-}
-  ]
-  },
-  {
-  "type": "submit",
-  "defaultValue": "Save"
-}
-];
+var clayConfig = require('./config');
 var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
 
 var panel = new UI.Window();

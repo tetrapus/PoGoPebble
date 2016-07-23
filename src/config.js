@@ -1,23 +1,40 @@
-module.exports = [];
-
+module.exports = 
 [
   {
   "type": "section",
   "items": [
     {
       "type": "heading",
-      "defaultValue": "This is a section"
+      "defaultValue": "Theme"
     },
     {
-      "type": "input",
-      "appKey": "email",
-      "label": "Email Address"
+  "type": "select",
+  "appKey": "team",
+  "defaultValue": "",
+  "label": "Team",
+  "options": [
+    { 
+      "label": "", 
+      "value": "" 
     },
-    {
-      "type": "toggle",
-      "appKey": "enableAnimations",
-      "label": "Enable Animations"
+    { 
+      "label": "Valor",
+      "value": "valor" 
+    },
+    { 
+      "label": "Mystic",
+      "value": "mystic" 
+    },
+    { 
+      "label": "Instinct",
+      "value": "instinct" 
     }
   ]
-  }
+}
+  ]
+  },
+  {
+  "type": "submit",
+  "defaultValue": "Save"
+}
 ];
