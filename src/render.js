@@ -3,8 +3,6 @@ var Compass = require('compass');
 var Nearby = require('nearby');
 var Tracker = require('tracker');
 
-var Themes = require('themes');
-
 
 function init(panel) {
   console.log("Call: View.init");
@@ -17,7 +15,7 @@ function init(panel) {
 
 function draw(panel, pos, pokemon) {
   console.log("Call: View.draw");
-  Compass.draw(pokemon.length);
+  Compass.draw(pos, pokemon);
   Nearby.draw(panel, pokemon);
   Tracker.draw(pos, pokemon);
 }

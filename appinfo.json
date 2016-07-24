@@ -31,6 +31,21 @@
                 "type": "font"
             },
             {
+                "file": "images/instinct.png",
+                "name": "IMAGES_INSTINCT_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/mystic.png",
+                "name": "IMAGES_MYSTIC_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/valor.png",
+                "name": "IMAGES_VALOR_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/pokemon90.png",
                 "name": "IMAGES_POKEMON90_PNG",
                 "type": "png"

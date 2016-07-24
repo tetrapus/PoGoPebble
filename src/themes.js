@@ -7,20 +7,28 @@ var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
 
 var themes = {
   none: {
-    backgroundColor: '#FFFF00',
+    backgroundColor: '#FFFFFF',
     textColor: '#000000',
+    highlightColor: '#AAAAAA',
+    logo: ''
   },
   valor: {
     backgroundColor: '#AA0000',
-    textColor: '#ffffff'
+    textColor: '#ffffff',
+    highlightColor: '#FF5555',
+    logo: 'images/valor.png'
   },
   mystic: {
     backgroundColor: '#0055FF',
-    textColor: '#ffffff'
+    textColor: '#ffffff',
+    highlightColor: '55AAFF',
+    logo: 'images/mystic.png'
   },
   instinct: {
-    backgroundColor: '#FFC107',
-    textColor: '#000000'
+    backgroundColor: '#FFFF00',
+    textColor: '#000000',
+    highlightColor: '#FFAA00',
+    logo: 'images/instinct.png'
   }
 };
 
