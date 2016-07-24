@@ -31,56 +31,6 @@
                 "type": "font"
             },
             {
-                "file": "images/instinct.png",
-                "name": "IMAGES_INSTINCT_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/mystic.png",
-                "name": "IMAGES_MYSTIC_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/valor.png",
-                "name": "IMAGES_VALOR_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon90.png",
-                "name": "IMAGES_POKEMON90_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon9.png",
-                "name": "IMAGES_POKEMON9_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon89.png",
-                "name": "IMAGES_POKEMON89_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon88.png",
-                "name": "IMAGES_POKEMON88_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon87.png",
-                "name": "IMAGES_POKEMON87_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon86.png",
-                "name": "IMAGES_POKEMON86_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon85.png",
-                "name": "IMAGES_POKEMON85_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/pokemon84.png",
                 "name": "IMAGES_POKEMON84_PNG",
                 "type": "png"
@@ -756,6 +706,11 @@
                 "type": "png"
             },
             {
+                "file": "images/mystic.png",
+                "name": "IMAGES_MYSTIC_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/main_9.png",
                 "name": "IMAGES_MAIN_9_PNG",
                 "type": "png"
@@ -1136,6 +1091,16 @@
                 "type": "png"
             },
             {
+                "file": "images/instinct.png",
+                "name": "IMAGES_INSTINCT_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/valor.png",
+                "name": "IMAGES_VALOR_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/pokemon97.png",
                 "name": "IMAGES_POKEMON97_PNG",
                 "type": "png"
@@ -1168,6 +1133,41 @@
             {
                 "file": "images/pokemon91.png",
                 "name": "IMAGES_POKEMON91_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon90.png",
+                "name": "IMAGES_POKEMON90_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon9.png",
+                "name": "IMAGES_POKEMON9_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon89.png",
+                "name": "IMAGES_POKEMON89_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon88.png",
+                "name": "IMAGES_POKEMON88_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon87.png",
+                "name": "IMAGES_POKEMON87_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon86.png",
+                "name": "IMAGES_POKEMON86_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon85.png",
+                "name": "IMAGES_POKEMON85_PNG",
                 "type": "png"
             }
         ]

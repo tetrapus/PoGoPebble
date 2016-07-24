@@ -4,10 +4,12 @@
 
 var UI = require('ui');
 var ajax = require('ajax');
+var Accel = require('ui/accel');
 
 var Geo = require('geo');
 
 var View = require('render');
+var Status = require('status');
 var Constants = require('constants');
 var Themes = require('themes');
 
@@ -97,10 +99,18 @@ navigator.geolocation.watchPosition(
 );
 
 setInterval(function() {
-  if (pokemon !== null && position !== null) {
-    updatePokemonState();
+  if (pokemon !== null && pokemon.length && position !== null) {
+    var previous = pokemon.length;
+    pokemon = pokemon.filter(function(p) { return p.expiration_time > (Date.now() / 1000); });
+    if (previous !== pokemon.length) {
+      // trigger a full redraw
+      View.draw(panel, position, pokemon);
+    } else {
+      // we didn't lose any pokemon so just update text display
+      Status.draw(position.coords, pokemon[0]);
+    }
   }
-}, 10000);
+}, 1000);
 
 setInterval(function() {
   if (position !== null && !options.debug) {
@@ -118,5 +128,5 @@ setInterval(function() {
   }
 }, 300000);
 
-panel.on('click', 'select', updatePokemon);
 panel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
+Accel.on('tap', updatePokemon);
