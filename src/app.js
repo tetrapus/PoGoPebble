@@ -31,7 +31,7 @@ function updatePokemonState() {
 function setPosition(pos) {
   console.log("Call: setPosition");
   // Ignore location updates under 10m
-  if (position === null || Geo.distance(position, pos) > 10) {
+  if (position === null || Geo.distance(position.coords, pos.coords) > 10) {
     position = pos;
     updatePokemonState();
     View.draw(panel, position, pokemon);
@@ -129,4 +129,6 @@ setInterval(function() {
 }, 300000);
 
 panel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
-Accel.on('tap', updatePokemon);
+Accel.on('tap', function () {
+  Status.rotate(position.coords, pokemon.length? pokemon[0] : null);
+});

@@ -1,6 +1,7 @@
 this.exports = {
   Geolocation: {
     OPTIONS: {
+      enableHighAccuracy: true,
       maximumAge: 10000,
       timeout: 10000
     }

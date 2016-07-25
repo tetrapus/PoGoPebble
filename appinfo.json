@@ -31,56 +31,6 @@
                 "type": "font"
             },
             {
-                "file": "images/pokemon84.png",
-                "name": "IMAGES_POKEMON84_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon83.png",
-                "name": "IMAGES_POKEMON83_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon82.png",
-                "name": "IMAGES_POKEMON82_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon81.png",
-                "name": "IMAGES_POKEMON81_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon80.png",
-                "name": "IMAGES_POKEMON80_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon8.png",
-                "name": "IMAGES_POKEMON8_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon79.png",
-                "name": "IMAGES_POKEMON79_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon78.png",
-                "name": "IMAGES_POKEMON78_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon77.png",
-                "name": "IMAGES_POKEMON77_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon76.png",
-                "name": "IMAGES_POKEMON76_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/pokemon75.png",
                 "name": "IMAGES_POKEMON75_PNG",
                 "type": "png"
@@ -1169,12 +1119,63 @@
                 "file": "images/pokemon85.png",
                 "name": "IMAGES_POKEMON85_PNG",
                 "type": "png"
+            },
+            {
+                "file": "images/pokemon84.png",
+                "name": "IMAGES_POKEMON84_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon83.png",
+                "name": "IMAGES_POKEMON83_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon82.png",
+                "name": "IMAGES_POKEMON82_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon81.png",
+                "name": "IMAGES_POKEMON81_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon80.png",
+                "name": "IMAGES_POKEMON80_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon8.png",
+                "name": "IMAGES_POKEMON8_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon79.png",
+                "name": "IMAGES_POKEMON79_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon78.png",
+                "name": "IMAGES_POKEMON78_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon77.png",
+                "name": "IMAGES_POKEMON77_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon76.png",
+                "name": "IMAGES_POKEMON76_PNG",
+                "type": "png"
             }
         ]
     },
     "sdkVersion": "3",
     "shortName": "Pokemon",
     "targetPlatforms": [
+        "aplite",
         "basalt"
     ],
     "uuid": "4917e277-a47e-493b-9107-d47ab86e2f3e",
@@ -1182,6 +1183,6 @@
     "versionLabel": "1.0",
     "watchapp": {
         "hiddenApp": false,
-        "watchface": false
+        "watchface": true
     }
 }

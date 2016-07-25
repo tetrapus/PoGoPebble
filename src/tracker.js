@@ -39,7 +39,9 @@ function updatePokemon(pos, new_pokemon) {
   console.log("Call: Tracker.updatePokemon");
   if (pokemon === null || new_pokemon.id !== pokemon.id) {
     if (pokemon === null || pokemon.pokemonId !== new_pokemon.pokemonId) {
-      Vibe.vibrate();
+      if (Geo.distance(pos, pokemon) < 30) {
+        Vibe.vibrate();
+      }
     }
 
     pokemon = new_pokemon;

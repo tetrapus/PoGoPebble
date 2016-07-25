@@ -45,7 +45,7 @@ var placeholder = new UI.Text({
 });
 
 function getPokemonSummary(position, pokemon) {
-  return getLocation(position, pokemon)+ ", " +
+   return getLocation(position, pokemon)+ ", " +
     getDespawn(position, pokemon);
 }
 

@@ -46,6 +46,15 @@ var teamIcon = new UI.Image({
   image: Themes.currentTheme().logo
 });
 
+var timeText = new UI.TimeText({
+  position: new Vector2(0, 0),
+  size: new Vector2(Constants.SCREEN_WIDTH, 36),
+  text: "%I:%M %p",
+  font: 'gothic-28-bold',
+  textAlign: 'center',
+  color: Themes.currentTheme().textColor
+});
+
 var state = {
   blank: true
 };
@@ -60,6 +69,7 @@ function init(panel) {
   panel.add(innerCircle);
   panel.add(needle);
   panel.add(teamIcon);
+  panel.add(timeText);
 }
 
 function updateCompass(pos, pokemon) {
@@ -70,6 +80,7 @@ function updateCompass(pos, pokemon) {
       size: new Vector2(Constants.SCREEN_WIDTH, 6),
     });
     teamIcon.animate('position', new Vector2(0, Constants.SCREEN_HEIGHT));
+    timeText.animate({position: new Vector2(0, -36)});
   }
   state.blank = false;
   var bearing = Geo.bearing(pos, pokemon) - Math.PI / 2;
@@ -92,6 +103,7 @@ function clearCompass() {
         size: new Vector2(Constants.SCREEN_WIDTH, 66),
       });
     }
+    timeText.animate({position: new Vector2(0, 0)});
   }
   state.blank = true;
 }
@@ -112,6 +124,7 @@ function updateTheme(theme) {
   negativeLine.backgroundColor(theme.backgroundColor);
   needle.backgroundColor(theme.textColor);
   teamIcon.image(theme.logo);
+  timeText.color(theme.textColor);
   if (state.blank && theme.logo) {
     teamIcon.animate('position', new Vector2(0, 0));
     negativeLine.animate({
