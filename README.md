@@ -5,7 +5,7 @@ Warning: This is an alpha release. Proceed with caution.
 
 ![Teams](docs/images/teams.png "Team Branding")
 
-![Pokemon Tracking]docs/images/fearow.png "Pokemon Tracking")
+![Pokemon Tracking](docs/images/fearow.png "Pokemon Tracking")
 - Feature list coming soon
 
 ## HOW DO I GET IT
