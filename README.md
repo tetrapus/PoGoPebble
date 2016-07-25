@@ -20,7 +20,7 @@ If the above method doesn't work, you can load it via CloudPebble as follows:
 - Project Name: PokeWatch
 - Github Project: github.com/tetrapus/PoGoPebble
 6. Click "Import"
-7. Click the green play button in the upper right corner. This should upload and install the app to your Pebble.
+7. Select "app.js" from the menu on the left and click the green play button in the upper right corner. This should upload and install the app to your Pebble.
 
 ## Coming Soon
 - Support for other pebbles
