@@ -1,8 +1,9 @@
 var Settings = require('settings');
 var Clay = require('clay');
 var clayConfig = require('config');
+var SettingsPage = require('settingspage');
 
-var clay = new Clay(clayConfig, null, {autoHandleEvents: false});
+var clay = new Clay(clayConfig, SettingsPage, {autoHandleEvents: false});
 
 
 var themes = {

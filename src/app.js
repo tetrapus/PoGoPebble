@@ -11,6 +11,7 @@ var Geo = require('geo');
 var View = require('render');
 var Status = require('status');
 var Constants = require('constants');
+var Settings = require('settings');
 var Themes = require('themes');
 
 var panel = new UI.Window();
@@ -18,23 +19,33 @@ var panel = new UI.Window();
 var position = null;
 var pokemon = [];
 
-var options = {debug: false};
+
+function isPokemonShown(pokemon) {
+  return pokemon.expiration_time > (Date.now() / 1000) &&
+    Geo.distance(position.coords, pokemon) < Settings.option('shown_range') &&
+    !Settings.option('hide' + pokemon.pokemonId);
+}
+
+function cmpPokemon(articuno, zapdos) {
+  var p1 = Settings.option("priority" + articuno.pokemonId);
+  var p2 = Settings.option("priority" + zapdos.pokemonId);
+  if (p1 === p2) {
+    return Geo.distance(position.coords, articuno) - Geo.distance(position.coords, zapdos);
+  } else {
+    return p2 - p1;
+  }
+}
 
 function updatePokemonState() {
-  pokemon = pokemon.filter(function(p) { return p.expiration_time > (Date.now() / 1000); });
-  pokemon.sort(function(a, b) {
-    return Geo.distance(position.coords, a) - Geo.distance(position.coords, b);
-  });
-  console.log(position);
-  console.log(position.coords);
-  console.log(position.coords.latitude);
+  pokemon = pokemon.filter(isPokemonShown);
+  pokemon.sort(cmpPokemon);
   View.draw(panel, position, pokemon);
 }
 
 function setPosition(pos) {
-  console.log("Call: setPosition");
   // Ignore location updates under 10m
   if (position === null || Geo.distance(position.coords, pos.coords) > 10) {
+    console.log("setPosition");
     position = pos;
     updatePokemonState();
   }
@@ -49,15 +60,13 @@ function random(max) {
 
 function updatePokemon() {
   console.log("Call: updatePokemon");
-  console.log(options.debug? 'http://freelancer.com/api/memberships/0.1/packages' : 'https://pokevision.com/map/data/' + position.coords.latitude + '/' + position.coords.longitude);
   ajax(
     {
-      url: options.debug? 'http://freelancer.com/api/memberships/0.1/packages' : 'https://pokevision.com/map/data/' + position.coords.latitude + '/' + position.coords.longitude,
+      url: 'https://pokevision.com/map/data/' + position.coords.latitude + '/' + position.coords.longitude,
       type: 'json'
     },
     function(data, status, req) {
-      console.log('Debug: ' + options.debug);
-      if (options.debug) {
+      if (Settings.option('debug')) {
         data = {pokemon: []};
         var num_pokemon = random(5);
         for (var i=0; i<num_pokemon; i++) {
@@ -80,6 +89,7 @@ function updatePokemon() {
   );
 }
 
+Themes.watchUpdate(updatePokemonState);
 Themes.init();
 View.init(panel);
 
@@ -103,7 +113,7 @@ navigator.geolocation.watchPosition(
 setInterval(function() {
   if (pokemon !== null && pokemon.length && position !== null) {
     var previous = pokemon.length;
-    pokemon = pokemon.filter(function(p) { return p.expiration_time > (Date.now() / 1000); });
+    pokemon = pokemon.filter(isPokemonShown);
     if (previous !== pokemon.length) {
       // trigger a full redraw
       View.draw(panel, position, pokemon);
@@ -115,7 +125,7 @@ setInterval(function() {
 }, 1000);
 
 setInterval(function() {
-  if (position !== null && !options.debug) {
+  if (position !== null && !Settings.option('debug')) {
     updatePokemon();
   }
 }, 60000);
@@ -130,7 +140,7 @@ setInterval(function() {
   }
 }, 300000);
 
-panel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
+// anel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
 Accel.on('tap', function () {
   Status.rotate(position.coords, pokemon.length? pokemon[0] : null);
 });

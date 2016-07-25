@@ -70,16 +70,22 @@ function init(panel) {
   panel.add(needle);
   panel.add(teamIcon);
   panel.add(timeText);
+  if (!Themes.currentTheme().logo) {
+    negativeLine.position(new Vector2(0, (Constants.SCREEN_HEIGHT >> 1) - 3));
+    negativeLine.size(new Vector2(Constants.SCREEN_WIDTH, 6));
+  }
 }
 
 function updateCompass(pos, pokemon) {
   console.log("Call: Compass.updateCompass");
-  if (state.blank && Themes.currentTheme().logo) {
-    negativeLine.animate({
-      position: new Vector2(0, (Constants.SCREEN_HEIGHT >> 1) - 3),
-      size: new Vector2(Constants.SCREEN_WIDTH, 6),
-    });
-    teamIcon.animate('position', new Vector2(0, Constants.SCREEN_HEIGHT));
+  if (state.blank) {
+    if (Themes.currentTheme().logo) {
+      negativeLine.animate({
+        position: new Vector2(0, (Constants.SCREEN_HEIGHT >> 1) - 3),
+        size: new Vector2(Constants.SCREEN_WIDTH, 6),
+      });
+      teamIcon.animate('position', new Vector2(0, Constants.SCREEN_HEIGHT));
+    }
     timeText.animate({position: new Vector2(0, -36)});
   }
   state.blank = false;
