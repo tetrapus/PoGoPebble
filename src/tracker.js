@@ -39,7 +39,7 @@ function updatePokemon(pos, new_pokemon) {
   console.log("Call: Tracker.updatePokemon");
   if (pokemon === null || new_pokemon.id !== pokemon.id) {
     if (pokemon === null || pokemon.pokemonId !== new_pokemon.pokemonId) {
-      if (Geo.distance(pos, pokemon) < 30) {
+      if (Geo.distance(pos, new_pokemon) < 30) {
         Vibe.vibrate();
       }
     }
@@ -57,7 +57,6 @@ function updatePokemon(pos, new_pokemon) {
     elements.pokemon.image(sprite);
   }
   
-  console.log(Geo.distance(pos, pokemon) + "m");
   Status.draw(position, pokemon);
 }
 

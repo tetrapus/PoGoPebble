@@ -25,6 +25,9 @@ function updatePokemonState() {
   pokemon.sort(function(a, b) {
     return Geo.distance(position.coords, a) - Geo.distance(position.coords, b);
   });
+  console.log(position);
+  console.log(position.coords);
+  console.log(position.coords.latitude);
   View.draw(panel, position, pokemon);
 }
 
@@ -34,7 +37,6 @@ function setPosition(pos) {
   if (position === null || Geo.distance(position.coords, pos.coords) > 10) {
     position = pos;
     updatePokemonState();
-    View.draw(panel, position, pokemon);
   }
 }
 
