@@ -12,33 +12,35 @@ var pokemonSection = [
   }
 ];
 
-for (var i=1; i<=151; i++) {
+for (var i=0; i < Data.shards.length; ++i) {
   pokemonSection.push({
     type: 'heading',
     appKey: 'heading'+i,
-    defaultValue: Data.pokemon[i],
-    size: 5
+    defaultValue: ""
   });
-  pokemonSection.push({
-    type: "toggle",
-    appKey: "hide"+i,
-    label: "Hidden",
-    defaultValue: false
-  });
-  pokemonSection.push({
-    type: "toggle",
-    appKey: "vibrate"+i,
-    label: "Enable Alerts",
-    defaultValue: true
-  });
-  pokemonSection.push({
-    "type": "slider",
-    "appKey": "priority"+i,
-    "defaultValue": 5,
-    "label": "Priority",
-    "max": 10,
-    "description": "The pokemon with the highest priority will be displayed first."
-  });
+  for (var j=0; j < Data.shards[i].length; ++j) {
+    var p = Data.shards[i][j];
+    pokemonSection.push({
+      type: "toggle",
+      appKey: "hide"+p,
+      label: "Hidden",
+      defaultValue: false
+    });
+    pokemonSection.push({
+      type: "toggle",
+      appKey: "vibrate"+p,
+      label: "Enable Alerts",
+      defaultValue: true
+    });
+    pokemonSection.push({
+      "type": "slider",
+      "appKey": "priority"+p,
+      "defaultValue": 5,
+      "label": "Priority",
+      "max": 10,
+      "description": "The Pokemon with the highest priority will be displayed first."
+    });
+  }
 }
 
 
@@ -115,6 +117,21 @@ this.exports =
         type: 'heading',
         defaultValue: 'Presets',
         id: 'preset_heading'
+      },
+      {
+        type: 'select',
+        id: 'preset_select',
+        label: 'Action',
+        defaultValue: 0,
+        description: "Warning! Applying a preset will reset all individual Pokemon preferences.",
+        options: [
+          {label: 'Reset', value: 0}
+        ]
+      },
+      {
+        type: 'button',
+        id: 'preset_apply',
+        defaultValue: 'Apply',
       }
     ]
   },

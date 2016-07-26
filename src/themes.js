@@ -10,7 +10,8 @@ var clay = new Clay(
   {
     autoHandleEvents: false,
     userData: {
-      pokemon: Data.pokemon
+      pokemon: Data.pokemon,
+      shards: Data.shards
     }
   }
 );

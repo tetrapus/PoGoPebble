@@ -19,11 +19,14 @@ var panel = new UI.Window();
 var position = null;
 var pokemon = [];
 
+var dismissed = [];
+
 
 function isPokemonShown(pokemon) {
   return pokemon.expiration_time > (Date.now() / 1000) &&
     Geo.distance(position.coords, pokemon) < Settings.option('shown_range') &&
-    !Settings.option('hide' + pokemon.pokemonId);
+    !Settings.option('hide' + pokemon.pokemonId) &&
+    dismissed.indexOf(pokemon.id) === -1;
 }
 
 function cmpPokemon(articuno, zapdos) {
@@ -140,7 +143,13 @@ setInterval(function() {
   }
 }, 300000);
 
-// anel.on('longClick', 'select', function() { options.debug = !options.debug; updatePokemon(); });
+panel.on('longClick', 'select', function() {
+  if (pokemon.length) {
+    Vibe.vibrate();
+    dismissed.push(pokemon[0].id);
+    updatePokemonState();
+  }
+});
 Accel.on('tap', function () {
   Status.rotate(position.coords, pokemon.length? pokemon[0] : null);
 });
