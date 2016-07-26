@@ -2,8 +2,18 @@ var Settings = require('settings');
 var Clay = require('clay');
 var clayConfig = require('config');
 var SettingsPage = require('settingspage');
+var Data = require('data');
 
-var clay = new Clay(clayConfig, SettingsPage, {autoHandleEvents: false});
+var clay = new Clay(
+  clayConfig,
+  SettingsPage,
+  {
+    autoHandleEvents: false,
+    userData: {
+      pokemon: Data.pokemon
+    }
+  }
+);
 
 
 var themes = {
@@ -50,13 +60,13 @@ function init() {
   Pebble.addEventListener('showConfiguration', function(e) {
     Pebble.openURL(clay.generateUrl());
   });
-  
+
   Pebble.addEventListener('webviewclosed', function(e) {
     if (e && !e.response) {
       return;
     }
     var dict = clay.getSettings(e.response);
-    // Save the Clay settings to the Settings module. 
+    // Save the Clay settings to the Settings module.
     Settings.option(dict);
     // If we changed teams we need to re-skin all navigation elements
     notifySubscribers();

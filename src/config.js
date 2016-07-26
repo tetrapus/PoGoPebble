@@ -6,18 +6,18 @@ var pokemonSection = [
     "defaultValue": "Pokemon"
   },
   {
-    "type": "select",
-    "appKey": "pokemon_selector",
-    "defaultValue": "Zubat",
-    "label": "Pokemon",
-    "options": [],
+    type: 'input',
+    appKey: 'pokesearch',
+    label: 'Search Pokemon'
   }
 ];
 
 for (var i=1; i<=151; i++) {
-  pokemonSection[1].options.push({
-    label: Data.pokemon[i],
-    value: i
+  pokemonSection.push({
+    type: 'heading',
+    appKey: 'heading'+i,
+    defaultValue: Data.pokemon[i],
+    size: 5
   });
   pokemonSection.push({
     type: "toggle",
@@ -37,11 +37,12 @@ for (var i=1; i<=151; i++) {
     "defaultValue": 5,
     "label": "Priority",
     "max": 10,
-    "description": "If " + Data.pokemon[i] + " has the highest priority it will be displayed."
+    "description": "The pokemon with the highest priority will be displayed first."
   });
 }
 
-this.exports = 
+
+this.exports =
 [
   {
   "type": "section",
@@ -56,21 +57,21 @@ this.exports =
       "defaultValue": "",
       "label": "Team",
       "options": [
-        { 
-          "label": "", 
-          "value": "" 
+        {
+          "label": "Neutral",
+          "value": ""
         },
-        { 
+        {
           "label": "Valor",
-          "value": "valor" 
+          "value": "valor"
         },
-        { 
+        {
           "label": "Mystic",
-          "value": "mystic" 
+          "value": "mystic"
         },
-        { 
+        {
           "label": "Instinct",
-          "value": "instinct" 
+          "value": "instinct"
         }
       ]
     }
@@ -108,8 +109,18 @@ this.exports =
     "items": pokemonSection
   },
   {
-  "type": "submit",
-  "defaultValue": "Save"
+    type: 'section',
+    items: [
+      {
+        type: 'heading',
+        defaultValue: 'Presets',
+        id: 'preset_heading'
+      }
+    ]
+  },
+  {
+    type: "submit",
+    defaultValue: "Save"
   },
   {
     type: "toggle",
