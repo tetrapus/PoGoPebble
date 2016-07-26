@@ -25,6 +25,7 @@ var elements = {
 
 var pokemon = null;
 var position = null;
+var vibeHistory = [];
 
 function init(panel) {
   console.log("Call: Tracker.init");
@@ -41,8 +42,14 @@ function updatePokemon(pos, new_pokemon) {
   if (pokemon === null || new_pokemon.id !== pokemon.id) {
     if (pokemon === null || pokemon.pokemonId !== new_pokemon.pokemonId) {
       if (Geo.distance(pos, new_pokemon) < Settings.option('vibration_range') &&
-         Settings.option('vibrate' + new_pokemon.pokemonId)) {
+         Settings.option('vibrate' + new_pokemon.pokemonId) &&
+         vibeHistory.indexOf(new_pokemon.id) === -1
+      ) {
         Vibe.vibrate();
+        vibeHistory.push(new_pokemon.id);
+        if (vibeHistory.length > 64) {
+          vibeHistory.shift();
+        }
       }
     }
 
@@ -58,7 +65,7 @@ function updatePokemon(pos, new_pokemon) {
     elements.pokemon.position(offset);
     elements.pokemon.image(sprite);
   }
-  
+
   Status.draw(position, pokemon);
 }
 

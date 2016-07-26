@@ -35,7 +35,7 @@ var element = new UI.Text({
   textAlign: 'center',
   color: Themes.currentTheme().textColor
 });
-    
+
 var placeholder = new UI.Text({
   position: POSITION_LEFT,
   size: TEXT_SIZE,
@@ -76,9 +76,8 @@ function getPokemonName(position, pokemon) {
 }
 
 var providers = [
-  getPokemonSummary,
-  getPokemonName,
   getTime,
+  getPokemonSummary
 ];
 
 function init(panel) {
@@ -113,7 +112,7 @@ function rotate(position, pokemon) {
     element.animate({position: POSITION_VISIBLE});
   }
 }
-  
+
 function update(position, pokemon) {
   var text = providers[localStorage.getItem('provider')](position, pokemon);
   element.text(text);

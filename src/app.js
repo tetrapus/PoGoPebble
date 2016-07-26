@@ -20,6 +20,7 @@ var position = null;
 var pokemon = [];
 
 var dismissed = [];
+var pokeLock = null;
 
 
 function isPokemonShown(pokemon) {
@@ -30,6 +31,10 @@ function isPokemonShown(pokemon) {
 }
 
 function cmpPokemon(articuno, zapdos) {
+  if (pokeLock !== null) {
+    if (pokeLock === articuno.id) return -1;
+    if (pokeLock === zapdos.id) return 1;
+  }
   var p1 = Settings.option("priority" + articuno.pokemonId);
   var p2 = Settings.option("priority" + zapdos.pokemonId);
   if (p1 === p2) {
@@ -39,8 +44,19 @@ function cmpPokemon(articuno, zapdos) {
   }
 }
 
+function updateLock() {
+  if (pokeLock !== null) {
+    if (pokemon.map(function(p) { return p.id; }).indexOf(pokeLock) === -1) {
+      // Reset lock
+      pokeLock = null;
+      Status.rotate();
+    }
+  }
+}
+
 function updatePokemonState() {
   pokemon = pokemon.filter(isPokemonShown);
+  updateLock();
   pokemon.sort(cmpPokemon);
   View.draw(panel, position, pokemon);
 }
@@ -151,5 +167,14 @@ panel.on('longClick', 'select', function() {
   }
 });
 Accel.on('tap', function () {
-  Status.rotate(position.coords, pokemon.length? pokemon[0] : null);
+  if (pokeLock === null) {
+    if (pokemon.length) {
+      pokeLock = pokemon[0].id;
+      Status.rotate();    }
+  } else {
+    // Clear pokelock
+    pokeLock = null;
+    Status.rotate();
+    updatePokemonState();
+  }
 });

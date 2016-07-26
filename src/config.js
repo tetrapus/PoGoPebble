@@ -110,7 +110,7 @@ this.exports =
     "type": "section",
     "items": pokemonSection
   },
-  {
+/*  {
     type: 'section',
     items: [
       {
@@ -134,7 +134,7 @@ this.exports =
         defaultValue: 'Apply',
       }
     ]
-  },
+  }, */
   {
     type: "submit",
     defaultValue: "Save"
