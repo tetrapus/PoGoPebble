@@ -9,7 +9,7 @@ Warning: This is an alpha release. Proceed with caution.
 - Feature list coming soon
 
 ## HOW DO I GET IT
-PokeWatch is in development and not currently available in the Pebble app store, but you can get it by [downloading the .pbw](https://github.com/tetrapus/PoGoPebble/releases/download/0.1/PokeWatch.pbw) and opening it with the Pebble app on your phone.
+PokeWatch is [available from the Pebble Appstore](https://apps.getpebble.com/applications/5796959aa40d829e7b00001e), but you can also get it by [downloading the .pbw](https://github.com/tetrapus/PoGoPebble/releases/download/0.1/PokeWatch.pbw) and opening it with the Pebble app on your phone.
 
 If the above method doesn't work, you can load it via CloudPebble as follows:
 
@@ -24,7 +24,8 @@ If the above method doesn't work, you can load it via CloudPebble as follows:
 7. Select "app.js" from the menu on the left and click the green play button in the upper right corner. This should upload and install the app to your Pebble.
 
 ## Coming Soon
+- Better presets for alerts and visible pokemon, only vibrate once for seen pokemon
+- Interactable watchapp, with the ability to scroll through nearby pokemon and hide individual pokemon from the interface
 - Support for other pebbles
 - Support for gyms and pokestops
-- Interactable watchapp, with the ability to scroll through nearby pokemon and hide individual pokemon from the interface
 - Compass Support
