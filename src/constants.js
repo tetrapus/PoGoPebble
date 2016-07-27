@@ -1,7 +1,7 @@
 var Feature = require('platform/feature');
 
 this.exports = {
-  type: "watchapp",
+  type: "watchface",
   Geolocation: {
     OPTIONS: {
       enableHighAccuracy: true,
