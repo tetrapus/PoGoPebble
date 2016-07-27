@@ -143,6 +143,6 @@ this.exports =
     type: "toggle",
     appKey: "debug",
     label: "Enable Debug Mode",
-    defaultValue: true
+    defaultValue: false
   }
 ];

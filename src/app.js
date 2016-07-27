@@ -69,6 +69,45 @@ function updatePokemonState() {
   View.draw(panel, position, pokemon);
 }
 
+function nextPokemon() {
+  if (pokeLock === null) {
+    if (pokemon.length > 1) {
+      pokeLock = pokemon[1].id;
+      Compass.lock();
+      updatePokemonState();
+    }
+  } else {
+    // 0 is locked pokemon
+    pokeLock = null; // temp clear for cmp
+    for (var i=1; i<pokemon.length && i < 5; i++) {
+      if (cmpPokemon(pokemon[i], pokemon[0]) > 0) {
+        pokeLock = pokemon[i].id;
+        break;
+      }
+    }
+    if (pokeLock === null) {
+      pokeLock = pokemon[0].id; // already at the end
+    }
+    updatePokemonState();
+  }
+}
+
+function previousPokemon() {
+  if (pokeLock !== null && pokemon.length > 1) {
+    pokeLock = null; // temp clear for cmp
+    for (var i=Math.min(pokemon.length-1, 4); i > 0; i--) {
+      if (cmpPokemon(pokemon[i], pokemon[0]) < 0) {
+        pokeLock = pokemon[i].id;
+        break;
+      }
+    }
+    if (pokeLock === null) {
+      pokeLock = pokemon[0].id; // already at the end
+    }
+    updatePokemonState();
+  }
+}
+
 function setPosition(pos) {
   // Ignore location updates under 10m
   if (position === null || Geo.distance(position.coords, pos.coords) > 10) {
@@ -168,26 +207,68 @@ setInterval(function() {
   }
 }, 300000);
 
-panel.on('longClick', 'select', function() {
-  if (pokemon.length) {
-    Vibe.vibrate();
-    dismissed.push(pokemon[0].id);
-    updatePokemonState();
-  }
-});
-Accel.on('tap', function () {
-  if (position === null) return;
-  if (pokeLock === null) {
-    if (pokemon.length) {
-      pokeLock = pokemon[0].id;
-      Status.rotate(position.coords, pokemon[0]);
-      Compass.lock();
+if (Constants.type === 'watchapp') {
+  panel.on('click', 'select', function() {
+    if (pokeLock === null) {
+      if (pokemon.length) {
+        pokeLock = pokemon[0].id;
+        Compass.lock();
+      }
+    } else {
+      pokeLock = null;
+      Compass.unlock();
+      updatePokemonState();
     }
-  } else {
-    // Clear pokelock
-    pokeLock = null;
+  });
+
+  panel.on('longClick', 'select', function() {
+    if (pokemon.length) {
+      Vibe.vibrate();
+      dismissed.push(pokemon[0].id);
+      updatePokemonState();
+    }
+  });
+
+  panel.on('click', 'up', nextPokemon);
+
+  panel.on('click', 'down', previousPokemon);
+
+  panel.on('longClick', 'up', function() {
+    if (pokemon.length) {
+      Vibe.vibrate();
+      var key = 'priority' + pokemon[0].pokemonId;
+      Settings.option(key, Math.min(Settings.option(key) + 1, 10));
+      updatePokemonState();
+    }
+  });
+
+  panel.on('longClick', 'down', function() {
+    if (pokemon.length) {
+      Vibe.vibrate();
+      var key = 'priority' + pokemon[0].pokemonId;
+      Settings.option(key, Math.max(Settings.option(key) - 1, 0));
+      updatePokemonState();
+    }
+  });
+
+  Accel.on('tap', function() {
     Status.rotate(position.coords, pokemon[0]);
-    Compass.unlock();
-    updatePokemonState();
-  }
-});
+  });
+} else {
+  Accel.on('tap', function () {
+    if (position === null) return;
+    if (pokeLock === null) {
+      if (pokemon.length) {
+        pokeLock = pokemon[0].id;
+        Status.rotate(position.coords, pokemon[0]);
+        Compass.lock();
+      }
+    } else {
+      // Clear pokelock
+      pokeLock = null;
+      Status.rotate(position.coords, pokemon[0]);
+      Compass.unlock();
+      updatePokemonState();
+    }
+  });
+}

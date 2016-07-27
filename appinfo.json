@@ -1188,15 +1188,15 @@
         ]
     },
     "sdkVersion": "3",
-    "shortName": "PokeWatch",
+    "shortName": "PokeHunt",
     "targetPlatforms": [
         "basalt"
     ],
-    "uuid": "4917e277-a47e-493b-9107-d47ab86e2f3e",
+    "uuid": "b6c5f323-500c-4724-b870-a59bab5cf1d5",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
         "hiddenApp": false,
-        "watchface": true
+        "watchface": false
     }
 }

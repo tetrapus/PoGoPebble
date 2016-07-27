@@ -28,9 +28,6 @@ var vibeHistory = [];
 function init(panel) {
   console.log("Call: Tracker.init");
   panel.add(elements.pokemon);
-  panel.on('click', 'select', function() {
-    Status.rotate(position, pokemon);
-  });
   Status.init(panel);
 }
 

@@ -75,11 +75,18 @@ function getPokemonName(position, pokemon) {
   return Data.pokemon[pokemon.pokemonId];
 }
 
-var providers = [
-  getTime,
-  getPokemonSummary
-];
-
+if (Constants.type === 'watchapp') {
+  var providers = [
+    getPokemonSummary,
+    getPokemonName,
+    getTime
+  ];
+} else {
+  var providers = [
+    getTime,
+    getPokemonSummary
+  ];
+}
 var provider = 0;
 
 function init(panel) {

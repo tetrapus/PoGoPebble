@@ -1,25 +1,13 @@
 var Feature = require('platform/feature');
 
-var filemap = {
-  WATCHFACE: {
-    EVENTS: 'events_wf'
-  },
-  WATCHAPP: {
-    EVENTS: 'events_wa'
-  }
-};
-
 this.exports = {
-  MODULES: filemap.WATCHFACE,
+  type: "watchapp",
   Geolocation: {
     OPTIONS: {
       enableHighAccuracy: true,
       maximumAge: 10000,
       timeout: 10000
     }
-  },
-  Navbar: {
-    
   },
   COMPASS: {
     BODY_RADIUS: 32,

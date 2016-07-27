@@ -4,13 +4,13 @@ var Vector2 = require('vector2');
 var Settings = require('settings');
 var Constants = require('constants');
 
-var NAV_HEIGHT = 36;
-var SHADOW_HEIGHT = 4;
+var NAV_HEIGHT = 32;
+var SHADOW_HEIGHT = 3;
 var CORNER_RADIUS = SHADOW_HEIGHT - 1;
 var SPRITE_WIDTH = 36;
 var SCREEN_WIDTH = Constants.SCREEN_WIDTH;
 
-var SPRITE_SIZE = new Vector2(SPRITE_WIDTH, SPRITE_WIDTH);
+var SPRITE_SIZE = new Vector2(SPRITE_WIDTH, NAV_HEIGHT);
 
 // Drawing functions
 var elem = {
@@ -113,10 +113,10 @@ function draw(panel, pokemon) {
     var p2 = Settings.option("priority" + pokemon[i].pokemonId);
     new_nearby.unshift(pokemon[i]);
     if (p2 > p1 || (p2 === p1 && pokemon[0].distance > pokemon[i].distance)) {
-      new_offset++;  
+      new_offset++;
     }
   }
-  
+
   if (new_nearby.length === nearby.length) {
     var matches = 0;
     for (i=0; i<new_nearby.length; i++) {
@@ -136,18 +136,21 @@ function draw(panel, pokemon) {
   drawBackground(nearby.length, new_offset);
   for (i=0; i<elem.icons.length; ++i) {
     // temporary animation
-    var element = elem.icons[i].element;
+    var icon = elem.icons[i];
     if (3 - i < nearby.length) {
       console.log("drawing");
-      drawPokemon(elem.icons[i], nearby[3-i]);
+      drawPokemon(icon, nearby[3-i]);
     } else {
-      element.animate({position: new Vector2(i * SPRITE_WIDTH, -SPRITE_WIDTH)}, 200);
+      icon.pokemon = null;
+      icon.element.animate({position: new Vector2(i * SPRITE_WIDTH, -SPRITE_WIDTH)}, 200);
     }
   }
 }
 
 function drawPokemon(icon, pokemon) {
   console.log("Call: Nearby.drawPokemon");
+  if (icon.pokemon === pokemon.pokemonId) return;
+  icon.pokemon = pokemon.pokemonId;
   icon.element.animate({position: new Vector2(icon.position * SPRITE_WIDTH, -SPRITE_WIDTH)}, 200);
   icon.element.queue(function (next) { icon.element.image('images/pokemon'+pokemon.pokemonId+'.png'); next(); });
   icon.element.animate({position: new Vector2(icon.position * SPRITE_WIDTH, 0)}, 200);
