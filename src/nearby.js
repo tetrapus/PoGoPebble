@@ -1,6 +1,8 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
+var Settings = require('settings');
+
 var NAV_HEIGHT = 36;
 var SHADOW_HEIGHT = 4;
 var CORNER_RADIUS = SHADOW_HEIGHT - 1;
@@ -67,8 +69,8 @@ var elem = {
       backgroundColor: 'white',
     }),
     shadow: new UI.Rect({
-      position: new Vector2(SCREEN_WIDTH, NAV_HEIGHT),
-      size: new Vector2(SCREEN_WIDTH, SHADOW_HEIGHT),
+      position: new Vector2(SCREEN_WIDTH, 0),
+      size: new Vector2(SCREEN_WIDTH, NAV_HEIGHT + SHADOW_HEIGHT),
       backgroundColor: '#bbbbbb'
     }),
     shadow_corner: new UI.Circle({
@@ -80,6 +82,7 @@ var elem = {
 };
 
 var nearby = [];
+var offset = 0;
 
 function init(panel) {
   console.log("Call: Nearby.init");
@@ -97,9 +100,16 @@ function draw(panel, pokemon) {
   console.log("Call: Nearby.draw");
   var i;
   var new_nearby = [];
+  var new_offset = 0;
+  var p1 = pokemon.length? Settings.option("priority" + pokemon[0].pokemonId) : null;
   for (i=1; i<pokemon.length && i < 5; i++) {
+    var p2 = Settings.option("priority" + pokemon[i].pokemonId);
     new_nearby.unshift(pokemon[i]);
+    if (p2 > p1 || (p2 === p1 && pokemon[0].distance > pokemon[i].distance)) {
+      new_offset++;  
+    }
   }
+  
   if (new_nearby.length === nearby.length) {
     var matches = 0;
     for (i=0; i<new_nearby.length; i++) {
@@ -108,12 +118,15 @@ function draw(panel, pokemon) {
       }
     }
     if (matches === nearby.length) {
+      if (offset !== new_offset) {
+        drawBackground(nearby.length, new_offset);
+      }
       return;
     }
   }
 
   nearby = new_nearby;
-  drawBackground(nearby.length);
+  drawBackground(nearby.length, new_offset);
   for (i=0; i<elem.icons.length; ++i) {
     // temporary animation
     var element = elem.icons[i].element;
@@ -133,16 +146,18 @@ function drawPokemon(icon, pokemon) {
   icon.element.animate({position: new Vector2(icon.position * SPRITE_WIDTH, 0)}, 200);
 }
 
-function drawBackground(size) {
+function drawBackground(size, new_offset) {
   console.log("Call: Nearby.drawBackground");
-  if (size != elem.navbar.size) {
+  if (size != elem.navbar.size || offset != new_offset) {
     var nav_start_x = SCREEN_WIDTH - (size * SPRITE_WIDTH);
-    elem.navbar.background.animate({position: new Vector2(nav_start_x, 0)});
-    elem.navbar.corner.animate({position: new Vector2(nav_start_x, NAV_HEIGHT - SHADOW_HEIGHT)});
-    elem.navbar.overhang.animate({position: new Vector2(nav_start_x - SHADOW_HEIGHT, 0)});
-    elem.navbar.shadow.animate({position: new Vector2(nav_start_x, NAV_HEIGHT)});
+    var nav_offset_x = nav_start_x + (new_offset * SPRITE_WIDTH);
+    elem.navbar.background.animate({position: new Vector2(nav_offset_x, 0)});
+    elem.navbar.corner.animate({position: new Vector2(nav_offset_x, NAV_HEIGHT - SHADOW_HEIGHT)});
+    elem.navbar.overhang.animate({position: new Vector2(nav_offset_x - SHADOW_HEIGHT, 0)});
+    elem.navbar.shadow.animate({position: new Vector2(nav_start_x, 0)});
     elem.navbar.shadow_corner.animate({position: new Vector2(nav_start_x, NAV_HEIGHT)});
     elem.navbar.size = size;
+    offset = new_offset;
   }
 }
 

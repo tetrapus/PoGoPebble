@@ -80,11 +80,10 @@ var providers = [
   getPokemonSummary
 ];
 
+var provider = 0;
+
 function init(panel) {
   Themes.watchUpdate(updateTheme);
-  if (localStorage.getItem("provider") === null) {
-    localStorage.setItem("provider", 0);
-  }
   panel.add(element);
   panel.add(placeholder);
 }
@@ -98,10 +97,7 @@ function draw(position, pokemon) {
 }
 
 function rotate(position, pokemon) {
-  localStorage.setItem(
-    'provider',
-    (parseInt(localStorage.getItem('provider')) + 1) % providers.length
-  );
+  provider = (provider + 1) % providers.length;
   if (pokemon !== null) {
     var temp = element;
     element = placeholder;
@@ -114,7 +110,7 @@ function rotate(position, pokemon) {
 }
 
 function update(position, pokemon) {
-  var text = providers[localStorage.getItem('provider')](position, pokemon);
+  var text = providers[provider](position, pokemon);
   element.text(text);
 }
 

@@ -5,11 +5,13 @@
 var UI = require('ui');
 var ajax = require('ajax');
 var Accel = require('ui/accel');
+var Vibe = require('ui/vibe');
 
 var Geo = require('geo');
 
 var View = require('render');
 var Status = require('status');
+var Compass = require('compass');
 var Constants = require('constants');
 var Settings = require('settings');
 var Themes = require('themes');
@@ -25,7 +27,7 @@ var pokeLock = null;
 
 function isPokemonShown(pokemon) {
   return pokemon.expiration_time > (Date.now() / 1000) &&
-    Geo.distance(position.coords, pokemon) < Settings.option('shown_range') &&
+    pokemon.distance < Settings.option('shown_range') &&
     !Settings.option('hide' + pokemon.pokemonId) &&
     dismissed.indexOf(pokemon.id) === -1;
 }
@@ -38,7 +40,7 @@ function cmpPokemon(articuno, zapdos) {
   var p1 = Settings.option("priority" + articuno.pokemonId);
   var p2 = Settings.option("priority" + zapdos.pokemonId);
   if (p1 === p2) {
-    return Geo.distance(position.coords, articuno) - Geo.distance(position.coords, zapdos);
+    return articuno.distance - zapdos.distance;
   } else {
     return p2 - p1;
   }
@@ -49,12 +51,18 @@ function updateLock() {
     if (pokemon.map(function(p) { return p.id; }).indexOf(pokeLock) === -1) {
       // Reset lock
       pokeLock = null;
-      Status.rotate();
+      Status.rotate(position.coords, pokemon[0]);
+      Compass.unlock();
     }
   }
 }
 
+function updateDistance(pokemon) {
+  pokemon.distance = Geo.distance(position.coords, pokemon);
+}
+
 function updatePokemonState() {
+  pokemon.map(updateDistance);
   pokemon = pokemon.filter(isPokemonShown);
   updateLock();
   pokemon.sort(cmpPokemon);
@@ -135,6 +143,7 @@ setInterval(function() {
     pokemon = pokemon.filter(isPokemonShown);
     if (previous !== pokemon.length) {
       // trigger a full redraw
+      updateLock();
       View.draw(panel, position, pokemon);
     } else {
       // we didn't lose any pokemon so just update text display
@@ -167,14 +176,18 @@ panel.on('longClick', 'select', function() {
   }
 });
 Accel.on('tap', function () {
+  if (position === null) return;
   if (pokeLock === null) {
     if (pokemon.length) {
       pokeLock = pokemon[0].id;
-      Status.rotate();    }
+      Status.rotate(position.coords, pokemon[0]);
+      Compass.lock();
+    }
   } else {
     // Clear pokelock
     pokeLock = null;
-    Status.rotate();
+    Status.rotate(position.coords, pokemon[0]);
+    Compass.unlock();
     updatePokemonState();
   }
 });

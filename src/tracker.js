@@ -2,8 +2,6 @@ var Vibe = require('ui/vibe');
 var UI = require('ui');
 var Vector2 = require('vector2');
 
-var Geo = require('geo');
-
 var Constants = require('constants');
 var Settings = require('settings');
 
@@ -41,7 +39,7 @@ function updatePokemon(pos, new_pokemon) {
   console.log("Call: Tracker.updatePokemon");
   if (pokemon === null || new_pokemon.id !== pokemon.id) {
     if (pokemon === null || pokemon.pokemonId !== new_pokemon.pokemonId) {
-      if (Geo.distance(pos, new_pokemon) < Settings.option('vibration_range') &&
+      if (new_pokemon.distance < Settings.option('vibration_range') &&
          Settings.option('vibrate' + new_pokemon.pokemonId) &&
          vibeHistory.indexOf(new_pokemon.id) === -1
       ) {

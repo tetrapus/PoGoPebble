@@ -30,27 +30,6 @@
                 "type": "font"
             },
             {
-                "file": "images/pball.png",
-                "menuIcon": true,
-                "name": "IMAGES_PBALL_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/valor.png",
-                "name": "IMAGES_VALOR_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon99.png",
-                "name": "IMAGES_POKEMON99_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon98.png",
-                "name": "IMAGES_POKEMON98_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/pokemon97.png",
                 "name": "IMAGES_POKEMON97_PNG",
                 "type": "png"
@@ -103,6 +82,61 @@
             {
                 "file": "images/pokemon88.png",
                 "name": "IMAGES_POKEMON88_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon87.png",
+                "name": "IMAGES_POKEMON87_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon86.png",
+                "name": "IMAGES_POKEMON86_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon85.png",
+                "name": "IMAGES_POKEMON85_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon84.png",
+                "name": "IMAGES_POKEMON84_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon83.png",
+                "name": "IMAGES_POKEMON83_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon82.png",
+                "name": "IMAGES_POKEMON82_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon81.png",
+                "name": "IMAGES_POKEMON81_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon80.png",
+                "name": "IMAGES_POKEMON80_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon8.png",
+                "name": "IMAGES_POKEMON8_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon79.png",
+                "name": "IMAGES_POKEMON79_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/pokemon78.png",
+                "name": "IMAGES_POKEMON78_PNG",
                 "type": "png"
             },
             {
@@ -741,6 +775,12 @@
                 "type": "png"
             },
             {
+                "file": "images/pball.png",
+                "menuIcon": true,
+                "name": "IMAGES_PBALL_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/mystic.png",
                 "name": "IMAGES_MYSTIC_PNG",
                 "type": "png"
@@ -1131,58 +1171,18 @@
                 "type": "png"
             },
             {
-                "file": "images/pokemon87.png",
-                "name": "IMAGES_POKEMON87_PNG",
+                "file": "images/valor.png",
+                "name": "IMAGES_VALOR_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon86.png",
-                "name": "IMAGES_POKEMON86_PNG",
+                "file": "images/pokemon99.png",
+                "name": "IMAGES_POKEMON99_PNG",
                 "type": "png"
             },
             {
-                "file": "images/pokemon85.png",
-                "name": "IMAGES_POKEMON85_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon84.png",
-                "name": "IMAGES_POKEMON84_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon83.png",
-                "name": "IMAGES_POKEMON83_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon82.png",
-                "name": "IMAGES_POKEMON82_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon81.png",
-                "name": "IMAGES_POKEMON81_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon80.png",
-                "name": "IMAGES_POKEMON80_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon8.png",
-                "name": "IMAGES_POKEMON8_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon79.png",
-                "name": "IMAGES_POKEMON79_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/pokemon78.png",
-                "name": "IMAGES_POKEMON78_PNG",
+                "file": "images/pokemon98.png",
+                "name": "IMAGES_POKEMON98_PNG",
                 "type": "png"
             }
         ]
@@ -1191,7 +1191,8 @@
     "shortName": "PokeWatch",
     "targetPlatforms": [
         "aplite",
-        "basalt"
+        "basalt",
+        "chalk"
     ],
     "uuid": "4917e277-a47e-493b-9107-d47ab86e2f3e",
     "versionCode": 1,

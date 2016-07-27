@@ -22,24 +22,28 @@ var themes = {
     backgroundColor: '#FFFFFF',
     textColor: '#000000',
     highlightColor: '#AAAAAA',
+    lockColor: '#555555',
     logo: ''
   },
   valor: {
     backgroundColor: '#AA0000',
     textColor: '#ffffff',
-    highlightColor: '#FF5555',
+    highlightColor: '#FF0000',
+    lockColor: '#ff5555',
     logo: 'images/valor.png'
   },
   mystic: {
     backgroundColor: '#0055FF',
     textColor: '#ffffff',
     highlightColor: '55AAFF',
+    lockColor: '#0000ff',
     logo: 'images/mystic.png'
   },
   instinct: {
     backgroundColor: '#FFFF00',
     textColor: '#000000',
-    highlightColor: '#FFAA00',
+    highlightColor: '#ffffaa',
+    lockColor: '#ffaa00',
     logo: 'images/instinct.png'
   }
 };
