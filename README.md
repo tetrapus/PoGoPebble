@@ -26,6 +26,7 @@ If the above method doesn't work, you can load it via CloudPebble as follows:
 ## Coming Soon
 - Better presets for alerts and visible pokemon, only vibrate once for seen pokemon
 - Interactable watchapp, with the ability to scroll through nearby pokemon and hide individual pokemon from the interface
+- Power saver mode
 - Support for other pebbles
 - Support for gyms and pokestops
 - Compass Support
