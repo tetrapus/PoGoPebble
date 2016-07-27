@@ -2,12 +2,13 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 
 var Settings = require('settings');
+var Constants = require('constants');
 
 var NAV_HEIGHT = 36;
 var SHADOW_HEIGHT = 4;
 var CORNER_RADIUS = SHADOW_HEIGHT - 1;
 var SPRITE_WIDTH = 36;
-var SCREEN_WIDTH = 144;
+var SCREEN_WIDTH = Constants.SCREEN_WIDTH;
 
 var SPRITE_SIZE = new Vector2(SPRITE_WIDTH, SPRITE_WIDTH);
 
@@ -77,7 +78,12 @@ var elem = {
       position: new Vector2(SCREEN_WIDTH, NAV_HEIGHT),
       radius: CORNER_RADIUS,
       backgroundColor: '#bbbbbb'
-    })
+    }),
+    shadow_overhang: new UI.Rect({
+      position: new Vector2(SCREEN_WIDTH - SHADOW_HEIGHT, 0),
+      size: new Vector2(SHADOW_HEIGHT, NAV_HEIGHT),
+      backgroundColor: '#bbbbbb',
+    }),
   }
 };
 
@@ -86,8 +92,9 @@ var offset = 0;
 
 function init(panel) {
   console.log("Call: Nearby.init");
-  panel.add(elem.navbar.shadow_corner);
   panel.add(elem.navbar.shadow);
+  panel.add(elem.navbar.shadow_overhang);
+  panel.add(elem.navbar.shadow_corner);
   panel.add(elem.navbar.background);
   panel.add(elem.navbar.overhang);
   panel.add(elem.navbar.corner);
@@ -156,6 +163,7 @@ function drawBackground(size, new_offset) {
     elem.navbar.overhang.animate({position: new Vector2(nav_offset_x - SHADOW_HEIGHT, 0)});
     elem.navbar.shadow.animate({position: new Vector2(nav_start_x, 0)});
     elem.navbar.shadow_corner.animate({position: new Vector2(nav_start_x, NAV_HEIGHT)});
+    elem.navbar.shadow_overhang.animate({position: new Vector2(nav_start_x - SHADOW_HEIGHT, 0)});
     elem.navbar.size = size;
     offset = new_offset;
   }
