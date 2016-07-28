@@ -132,10 +132,11 @@ function updatePokemon() {
       type: 'json'
     },
     function(data, status, req) {
+      var i;
       if (Settings.option('debug')) {
         data = {pokemon: []};
         var num_pokemon = random(5);
-        for (var i=0; i<num_pokemon; i++) {
+        for (i=0; i<num_pokemon; i++) {
           var id = random(151) + 1;
           data.pokemon.push(
             {
@@ -148,6 +149,18 @@ function updatePokemon() {
           );
         }
       }
+      // Remove duplicates
+      var duplicated = {};
+      var keys = [];
+      for (i=0; i<data.pokemon.length; i++) {
+        var p = data.pokemon[i];
+        p.unique_key = p.pokemonId + ":" + p.latitude + ":" + p.longitude;
+        if (!duplicated[p.unique_key]) keys.push(p.unique_key);
+        if (!duplicated[p.unique_key] || duplicated[p.unique_key].id > p.id) {
+          duplicated[p.unique_key] = p;
+        }
+      }
+      data.pokemon = keys.map(function(k) { return duplicated[k]; });
       console.log(data.pokemon.length);
       pokemon = data.pokemon;
       updatePokemonState();
