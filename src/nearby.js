@@ -1,7 +1,6 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 
-var Settings = require('settings');
 var Constants = require('constants');
 
 var NAV_HEIGHT = 32;
@@ -108,11 +107,15 @@ function draw(panel, pokemon) {
   var i;
   var new_nearby = [];
   var new_offset = 0;
-  var p1 = pokemon.length? Settings.option("priority" + pokemon[0].pokemonId) : null;
   for (i=1; i<pokemon.length && i < 5; i++) {
-    var p2 = Settings.option("priority" + pokemon[i].pokemonId);
     new_nearby.unshift(pokemon[i]);
-    if (p2 > p1 || (p2 === p1 && pokemon[0].distance > pokemon[i].distance)) {
+    if (
+      pokemon[i].priority > pokemon[0].priority ||
+      (
+        pokemon[i].priority === pokemon[0].priority &&
+        pokemon[0].distance > pokemon[i].distance
+      )
+    ) {
       new_offset++;
     }
   }

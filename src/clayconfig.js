@@ -80,6 +80,31 @@ this.exports =
   ]
   },
   {
+  type: 'section',
+  items: [
+      {
+        type: 'heading',
+        defaultValue: 'Modes',
+        id: 'mode_heading'
+      },
+      {
+        type: 'checkboxgroup',
+        appKey: 'modes',
+        defaultValue: ["enable_priority"],
+        options: [
+          {
+            label: "Enable Backlight",
+            value: "enable_backlight"
+          },
+          {
+            label: "Enable Priority",
+            value: "enable_priority"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "type": "section",
     "items": [
       {
@@ -91,7 +116,7 @@ this.exports =
         "appKey": "vibration_range",
         "defaultValue": 50,
         "label": "Alert (metres)",
-        "max": 500,
+        "max": 1000,
         "step": 10,
         "description": "Vibrate if a new pokemon appears within the given range"
       },
@@ -110,31 +135,6 @@ this.exports =
     "type": "section",
     "items": pokemonSection
   },
-/*  {
-    type: 'section',
-    items: [
-      {
-        type: 'heading',
-        defaultValue: 'Presets',
-        id: 'preset_heading'
-      },
-      {
-        type: 'select',
-        id: 'preset_select',
-        label: 'Action',
-        defaultValue: 0,
-        description: "Warning! Applying a preset will reset all individual Pokemon preferences.",
-        options: [
-          {label: 'Reset', value: 0}
-        ]
-      },
-      {
-        type: 'button',
-        id: 'preset_apply',
-        defaultValue: 'Apply',
-      }
-    ]
-  }, */
   {
     type: "submit",
     defaultValue: "Save"

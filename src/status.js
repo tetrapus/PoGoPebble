@@ -5,7 +5,7 @@ var Geo = require('geo');
 var leftPad = require('leftpad');
 
 var Constants = require('constants');
-var Themes = require('themes');
+var Options = require('options');
 var Data = require('data');
 
 
@@ -33,7 +33,7 @@ var element = new UI.Text({
   size: TEXT_SIZE,
   font: 'gothic-24-bold',
   textAlign: 'center',
-  color: Themes.currentTheme().textColor
+  color: Options.currentTheme().textColor
 });
 
 var placeholder = new UI.Text({
@@ -41,7 +41,7 @@ var placeholder = new UI.Text({
   size: TEXT_SIZE,
   font: 'gothic-24-bold',
   textAlign: 'center',
-  color: Themes.currentTheme().textColor
+  color: Options.currentTheme().textColor
 });
 
 function getPokemonSummary(position, pokemon) {
@@ -90,7 +90,7 @@ if (Constants.type === 'watchapp') {
 var provider = 0;
 
 function init(panel) {
-  Themes.watchUpdate(updateTheme);
+  Options.watchUpdate(updateTheme);
   panel.add(element);
   panel.add(placeholder);
 }

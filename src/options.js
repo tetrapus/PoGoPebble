@@ -1,11 +1,11 @@
 var Settings = require('settings');
 var Clay = require('clay');
-var clayConfig = require('config');
+var Config = require('clayconfig');
 var SettingsPage = require('settingspage');
 var Data = require('data');
 
 var clay = new Clay(
-  clayConfig,
+  Config,
   SettingsPage,
   {
     autoHandleEvents: false,
@@ -16,6 +16,7 @@ var clay = new Clay(
   }
 );
 
+var debug = false;
 
 var themes = {
   none: {
@@ -50,6 +51,23 @@ var themes = {
 
 var subscribers = [];
 
+// FIXME: Sync with Config
+var defaults = {
+  team: "",
+  debug: false,
+  modes: ["enable_priority"],
+  vibration_range: 50,
+  shown_range: 500,
+}
+
+var pokemon_defaults = {
+  hide: false,
+  vibrate: true,
+  priority: 5
+}
+
+var features = {};
+
 
 function currentTheme() {
   var current = Settings.option('team');
@@ -59,6 +77,36 @@ function currentTheme() {
   if (!theme)
     theme = themes.none;
   return theme;
+}
+
+function getSetting(setting) {
+  var option = Settings.option(setting);
+  if (typeof option == 'undefined') {
+    option = defaults[setting];
+  }
+  return option;
+}
+
+function getPokemonSetting(setting, pokemon) {
+  var option = Settings.option(setting + pokemon);
+  if (typeof option == 'undefined') {
+    option = pokemon_defaults[setting];
+  }
+  return option;
+}
+
+function setPokemonSetting(setting, pokemon, value) {
+  Settings.option(setting + pokemon, value);
+}
+
+function getFeatures() {
+  var modes = getSetting("modes");
+  var options = {};
+  for (var i=0; i<modes.length; i++) {
+    console.log(modes[i]);
+    options[modes[i]] = true;
+  }
+  return options;
 }
 
 function init() {
@@ -93,5 +141,10 @@ function watchUpdate(callback) {
 this.exports = {
   currentTheme: currentTheme,
   init: init,
-  watchUpdate: watchUpdate
+  watchUpdate: watchUpdate,
+  getFeatures: getFeatures,
+  get: getSetting,
+  getByPokemon: getPokemonSetting,
+  setByPokemon: setPokemonSetting,
+  set: Settings.option
 };
