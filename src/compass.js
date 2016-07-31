@@ -2,8 +2,10 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 var Constants = require('constants');
 
-var Themes = require('themes');
+var Options = require('options');
 var Geo = require('geo');
+
+var Backlight = require('backlight');
 
 var C = Constants.COMPASS;
 
@@ -26,38 +28,38 @@ var PARTITION_STATES = {
 var compass = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: C.BODY_RADIUS,
-  backgroundColor: Themes.currentTheme().highlightColor,
+  backgroundColor: Options.currentTheme().highlightColor,
 });
 
 var innerRing = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: C.CENTER_RADIUS + C.RING_WIDTH,
-  backgroundColor: Themes.currentTheme().backgroundColor,
+  backgroundColor: Options.currentTheme().backgroundColor,
 });
 
 var innerCircle = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: C.CENTER_RADIUS,
-  backgroundColor: Themes.currentTheme().highlightColor
+  backgroundColor: Options.currentTheme().highlightColor
 });
 
 var negativeLine = new UI.Rect({
   position: PARTITION_STATES.expanded.position,
   size: PARTITION_STATES.expanded.size,
-  backgroundColor: Themes.currentTheme().backgroundColor,
+  backgroundColor: Options.currentTheme().backgroundColor,
 });
 
 var needle = new UI.Circle({
   position: POSITION_MIDDLE,
   radius: C.NEEDLE_RADIUS,
-  backgroundColor: Themes.currentTheme().textColor
+  backgroundColor: Options.currentTheme().textColor
 });
 
 var teamIcon = new UI.Image({
   position: POSITION_ORIGIN,
   size: new Vector2(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT),
   compositing: 'set',
-  image: Themes.currentTheme().logo
+  image: Options.currentTheme().logo
 });
 
 var timeText = new UI.TimeText({
@@ -66,7 +68,7 @@ var timeText = new UI.TimeText({
   text: "%I:%M %p",
   font: 'gothic-28-bold',
   textAlign: 'center',
-  color: Themes.currentTheme().textColor
+  color: Options.currentTheme().textColor
 });
 
 var state = {
@@ -77,7 +79,8 @@ var state = {
 
 function init(panel) {
   console.log("Call: Compass.init");
-  Themes.watchUpdate(updateTheme);
+  Backlight.init();
+  Options.watchUpdate(updateTheme);
   panel.add(compass);
   panel.add(negativeLine);
   panel.add(innerRing);
@@ -85,7 +88,7 @@ function init(panel) {
   panel.add(needle);
   panel.add(teamIcon);
   panel.add(timeText);
-  if (!Themes.currentTheme().logo) {
+  if (!Options.currentTheme().logo) {
     negativeLine.position(PARTITION_STATES.normal.position);
     negativeLine.size(PARTITION_STATES.normal.size);
   }
@@ -94,7 +97,7 @@ function init(panel) {
 function updateCompass(pos, pokemon) {
   console.log("Call: Compass.updateCompass");
   if (state.blank) {
-    if (Themes.currentTheme().logo) {
+    if (Options.currentTheme().logo) {
       negativeLine.animate(PARTITION_STATES.normal);
       teamIcon.animate('position', new Vector2(0, Constants.SCREEN_HEIGHT));
     }
@@ -114,7 +117,7 @@ function clearCompass() {
   console.log("Call: Compass.clearCompass");
   if (!state.blank) {
     needle.animate({position: POSITION_MIDDLE});
-    if (Themes.currentTheme().logo) {
+    if (Options.currentTheme().logo) {
       teamIcon.animate('position', POSITION_ORIGIN);
       negativeLine.animate(PARTITION_STATES.expanded);
     }
@@ -133,12 +136,14 @@ function draw(pos, pokemon) {
 }
 
 function lock() {
-  compass.backgroundColor(Themes.currentTheme().lockColor);
+  Backlight.enable();
+  compass.backgroundColor(Options.currentTheme().lockColor);
   state.locked = true;
 }
 
 function unlock() {
-  compass.backgroundColor(Themes.currentTheme().highlightColor);
+  Backlight.disable();
+  compass.backgroundColor(Options.currentTheme().highlightColor);
   state.locked = false;
 }
 

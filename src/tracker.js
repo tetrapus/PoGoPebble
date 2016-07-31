@@ -3,7 +3,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 
 var Constants = require('constants');
-var Settings = require('settings');
+var Options = require('options');
 
 var Status = require('status');
 
@@ -34,20 +34,20 @@ function init(panel) {
 function updatePokemon(pos, new_pokemon) {
   position = pos;
   console.log("Call: Tracker.updatePokemon");
-  if (pokemon === null || new_pokemon.id !== pokemon.id) {
-    if (pokemon === null || pokemon.pokemonId !== new_pokemon.pokemonId) {
-      if (new_pokemon.distance < Settings.option('vibration_range') &&
-         Settings.option('vibrate' + new_pokemon.pokemonId) &&
-         vibeHistory.indexOf(new_pokemon.id) === -1
-      ) {
-        Vibe.vibrate();
-        vibeHistory.push(new_pokemon.id);
-        if (vibeHistory.length > 64) {
-          vibeHistory.shift();
-        }
-      }
-    }
 
+  if (
+     new_pokemon.distance < Options.get('vibration_range') &&
+     new_pokemon.vibrate &&
+     vibeHistory.indexOf(new_pokemon.id) === -1
+  ) {
+    Vibe.vibrate();
+    vibeHistory.push(new_pokemon.id);
+    if (vibeHistory.length > 64) {
+      vibeHistory.shift();
+    }
+  }
+
+  if (pokemon === null || new_pokemon.id !== pokemon.id) {
     pokemon = new_pokemon;
 
     var sprite = 'images/main_' + Math.floor(pokemon.pokemonId / Constants.SPRITE_ELEMS) + '.png';

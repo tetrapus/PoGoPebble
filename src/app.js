@@ -6,6 +6,7 @@ var UI = require('ui');
 var ajax = require('ajax');
 var Accel = require('ui/accel');
 var Vibe = require('ui/vibe');
+var Light = require('ui/light');
 
 var Geo = require('geo');
 
@@ -13,22 +14,23 @@ var View = require('render');
 var Status = require('status');
 var Compass = require('compass');
 var Constants = require('constants');
-var Settings = require('settings');
-var Themes = require('themes');
+var Options = require('options');
 
 var panel = new UI.Window();
 
 var position = null;
 var pokemon = [];
 
-var dismissed = [];
 var pokeLock = null;
 
+var backLight = false;
+
+var dismissed = [];
 
 function isPokemonShown(pokemon) {
   return pokemon.expiration_time > (Date.now() / 1000) &&
-    pokemon.distance < Settings.option('shown_range') &&
-    !Settings.option('hide' + pokemon.pokemonId) &&
+    pokemon.distance < Options.get('shown_range') &&
+    !pokemon.hidden &&
     dismissed.indexOf(pokemon.id) === -1;
 }
 
@@ -37,12 +39,10 @@ function cmpPokemon(articuno, zapdos) {
     if (pokeLock === articuno.id) return -1;
     if (pokeLock === zapdos.id) return 1;
   }
-  var p1 = Settings.option("priority" + articuno.pokemonId);
-  var p2 = Settings.option("priority" + zapdos.pokemonId);
-  if (p1 === p2) {
+  if (articuno.priority === zapdos.priority) {
     return articuno.distance - zapdos.distance;
   } else {
-    return p2 - p1;
+    return zapdos.priority - articuno.priority;
   }
 }
 
@@ -57,12 +57,19 @@ function updateLock() {
   }
 }
 
-function updateDistance(pokemon) {
+function updatePokemonInfo(pokemon) {
   pokemon.distance = Geo.distance(position.coords, pokemon);
+  if (Options.getFeatures().enable_priority) {
+    pokemon.priority = Options.getByPokemon('priority', pokemon.pokemonId);
+  } else {
+    pokemon.priority = 5;
+  }
+  pokemon.hidden = Options.getByPokemon('hide', pokemon.pokemonId);
+  pokemon.vibrate = Options.getByPokemon('vibrate', pokemon.pokemonId);
 }
 
 function updatePokemonState() {
-  pokemon.map(updateDistance);
+  pokemon.map(updatePokemonInfo);
   pokemon = pokemon.filter(isPokemonShown);
   updateLock();
   pokemon.sort(cmpPokemon);
@@ -79,7 +86,7 @@ function nextPokemon() {
   } else {
     // 0 is locked pokemon
     pokeLock = null; // temp clear for cmp
-    for (var i=1; i<pokemon.length && i < 5; i++) {
+    for (var i=1; i<pokemon.length; i++) {
       if (cmpPokemon(pokemon[i], pokemon[0]) > 0) {
         pokeLock = pokemon[i].id;
         break;
@@ -95,7 +102,7 @@ function nextPokemon() {
 function previousPokemon() {
   if (pokeLock !== null && pokemon.length > 1) {
     pokeLock = null; // temp clear for cmp
-    for (var i=Math.min(pokemon.length-1, 4); i > 0; i--) {
+    for (var i=pokemon.length-1; i > 0; i--) {
       if (cmpPokemon(pokemon[i], pokemon[0]) < 0) {
         pokeLock = pokemon[i].id;
         break;
@@ -109,10 +116,10 @@ function previousPokemon() {
 }
 
 function setPosition(pos) {
-  // Ignore location updates under 10m
-  if (position === null || Geo.distance(position.coords, pos.coords) > 10) {
+  // Ignore location updates under 15m
+  position = pos;
+  if (position === null || Geo.distance(position.coords, pos.coords) > 15) {
     console.log("setPosition");
-    position = pos;
     updatePokemonState();
   }
 }
@@ -133,9 +140,9 @@ function updatePokemon() {
     },
     function(data, status, req) {
       var i;
-      if (Settings.option('debug')) {
+      if (Options.get('debug')) {
         data = {pokemon: []};
-        var num_pokemon = random(5);
+        var num_pokemon = random(8);
         for (i=0; i<num_pokemon; i++) {
           var id = random(151) + 1;
           data.pokemon.push(
@@ -168,8 +175,8 @@ function updatePokemon() {
   );
 }
 
-Themes.watchUpdate(updatePokemonState);
-Themes.init();
+Options.watchUpdate(updatePokemonState);
+Options.init();
 View.init(panel);
 
 // Initialise vars
@@ -205,7 +212,7 @@ setInterval(function() {
 }, 1000);
 
 setInterval(function() {
-  if (position !== null && !Settings.option('debug')) {
+  if (position !== null && !Options.get('debug')) {
     updatePokemon();
   }
 }, 60000);
@@ -248,18 +255,22 @@ if (Constants.type === 'watchapp') {
 
   panel.on('longClick', 'up', function() {
     if (pokemon.length) {
+      var p = pokemon[0].pokemonId;
       Vibe.vibrate();
-      var key = 'priority' + pokemon[0].pokemonId;
-      Settings.option(key, Math.min(Settings.option(key) + 1, 10));
+      Options.setByPokemon(
+        'priority', p,
+        Math.min(Options.getByPokemon('priority', p) + 1, 10));
       updatePokemonState();
     }
   });
 
   panel.on('longClick', 'down', function() {
     if (pokemon.length) {
+      var p = pokemon[0].pokemonId;
       Vibe.vibrate();
-      var key = 'priority' + pokemon[0].pokemonId;
-      Settings.option(key, Math.max(Settings.option(key) - 1, 0));
+      Options.setByPokemon(
+        'priority', p,
+        Math.max(Options.getByPokemon('priority', p) - 1, 0));
       updatePokemonState();
     }
   });

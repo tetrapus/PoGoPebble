@@ -211,9 +211,18 @@ this.exports = function(minified) {
       }
     };
     updateVisible(selector.get());
-    selector.on('change', function() {
+
+    selector.on('keydown', function(e) {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+        document.activeElement.blur();
+      }
+    });
+
+    selector.on('keyup', function() {
       updateVisible(selector.get());
     });
+
     clayConfig.getItemById('preset_apply').on('click', function() {
       var option = clayConfig.getItemById('preset_select').get();
       if (option === 0) {

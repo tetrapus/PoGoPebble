@@ -2,7 +2,7 @@ var UI = require('ui');
 var Vector2 = require('vector2');
 
 var Constants = require('constants');
-var Themes = require('themes');
+var Options = require('options');
 
 
 var background = new UI.Rect({
@@ -11,12 +11,12 @@ var background = new UI.Rect({
     Constants.SCREEN_WIDTH,
     Constants.SCREEN_HEIGHT
   ),
-  backgroundColor: Themes.currentTheme().backgroundColor,
+  backgroundColor: Options.currentTheme().backgroundColor,
 });
 
 
 function init(panel) {
-  Themes.watchUpdate(updateTheme);
+  Options.watchUpdate(updateTheme);
   panel.add(background);
 }
 
