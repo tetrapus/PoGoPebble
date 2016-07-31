@@ -6,7 +6,6 @@ var UI = require('ui');
 var ajax = require('ajax');
 var Accel = require('ui/accel');
 var Vibe = require('ui/vibe');
-var Light = require('ui/light');
 
 var Geo = require('geo');
 
@@ -22,8 +21,6 @@ var position = null;
 var pokemon = [];
 
 var pokeLock = null;
-
-var backLight = false;
 
 var dismissed = [];
 

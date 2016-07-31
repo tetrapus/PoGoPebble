@@ -16,8 +16,6 @@ var clay = new Clay(
   }
 );
 
-var debug = false;
-
 var themes = {
   none: {
     backgroundColor: '#FFFFFF',
@@ -58,15 +56,13 @@ var defaults = {
   modes: ["enable_priority"],
   vibration_range: 50,
   shown_range: 500,
-}
+};
 
 var pokemon_defaults = {
   hide: false,
   vibrate: true,
   priority: 5
-}
-
-var features = {};
+};
 
 
 function currentTheme() {
